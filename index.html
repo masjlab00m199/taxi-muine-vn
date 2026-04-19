@@ -145,7 +145,25 @@
 }
 
 
-  </style>
+  
+#langWrap {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#langMenu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  min-width: 190px;
+}
+
+#langToggle {
+  white-space: nowrap;
+}
+
+</style>
 </head>
 
 <body class="text-gray-800 p-4">
@@ -174,13 +192,13 @@
     🟢 WhatsApp
   </a>
 
-<div class="relative" id="langWrap">
+<div class="relative ml-auto" id="langWrap">
     <button type="button" id="langToggle" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-gray-800 font-semibold text-sm shadow hover:bg-gray-50 border border-gray-200">
       <span id="currentFlag">🇬🇧</span>
       <span id="currentLang">English</span>
       <span class="text-xs">▾</span>
     </button>
-    <div id="langMenu" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden z-50">
+    <div id="langMenu" class="hidden absolute right-0 top-full mt-2 w-48 bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden z-50">
       <button type="button" class="lang-option w-full text-left px-4 py-3 hover:bg-gray-50 text-sm font-semibold" data-lang="en">🇬🇧 English</button>
       <button type="button" class="lang-option w-full text-left px-4 py-3 hover:bg-gray-50 text-sm font-semibold" data-lang="vi">🇻🇳 Tiếng Việt</button>
       <button type="button" class="lang-option w-full text-left px-4 py-3 hover:bg-gray-50 text-sm font-semibold" data-lang="ru">🇷🇺 Русский</button>
