@@ -164,6 +164,137 @@
   white-space: nowrap;
 }
 
+
+
+    .route-card.active-route {
+      border-color: rgba(34,197,94,0.9);
+      box-shadow: 0 14px 34px rgba(34,197,94,0.18);
+      transform: translateY(-3px);
+    }
+
+    .route-price-badge {
+      margin-top: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid #bbf7d0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-chip {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      background:#ecfdf5;
+      color:#047857;
+      border:1px solid #bbf7d0;
+    }
+
+    .soft-input {
+      transition: all 0.18s ease;
+      background: #fff;
+    }
+
+    .soft-input:focus {
+      border-color: #22c55e;
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.12);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item[open] {
+      border-color: #86efac;
+      box-shadow: 0 10px 24px rgba(34,197,94,0.08);
+    }
+
+    .mini-highlight {
+      background: linear-gradient(135deg, #ffffff, #f0fdf4);
+      border: 1px solid #dcfce7;
+    }
+
+
+
+    .vip-strip {
+      background: linear-gradient(90deg, #111827, #1f2937, #0f172a);
+      color: #f8fafc;
+      border: 1px solid rgba(251,191,36,0.25);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.22);
+    }
+
+    .gold-text {
+      background: linear-gradient(90deg, #fde68a, #f59e0b, #fff7cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-stat {
+      background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+    }
+
+    .vip-card {
+      background: linear-gradient(180deg, #ffffff, #f8fafc);
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 18px 36px rgba(15,23,42,0.08);
+    }
+
+    .vip-card:hover {
+      border-color: #f59e0b;
+      box-shadow: 0 22px 46px rgba(245,158,11,0.14);
+    }
+
+    .premium-feature {
+      background: linear-gradient(180deg, #fff, #fffbeb);
+      border: 1px solid #fde68a;
+    }
+
+    .booking-shell {
+      background:
+        radial-gradient(circle at top right, rgba(34,197,94,0.07), transparent 28%),
+        radial-gradient(circle at top left, rgba(245,158,11,0.08), transparent 24%),
+        #ffffff;
+    }
+
+    .vip-cta {
+      background: linear-gradient(90deg, #16a34a, #22c55e);
+      box-shadow: 0 18px 30px rgba(34,197,94,0.20);
+    }
+
+    .vip-cta:hover {
+      filter: brightness(1.02);
+      transform: translateY(-1px);
+    }
+
+    .form-benefit {
+      background: linear-gradient(180deg, #ffffff, #f0fdf4);
+      border: 1px solid #dcfce7;
+    }
+
+    .review-premium {
+      background:
+        linear-gradient(180deg, #ffffff, #fafaf9);
+      border: 1px solid #e5e7eb;
+    }
+
 </style>
 </head>
 
@@ -214,38 +345,50 @@
     </div>
   </div>
 
+
+  <div class="max-w-6xl mx-auto mb-4">
+    <div class="vip-strip rounded-2xl px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div class="text-sm md:text-base font-semibold">
+        <span class="gold-text font-extrabold">VIP PRIVATE CAR</span> • Xe riêng cao cấp • Tài xế quen tuyến • Hỗ trợ nhanh trong ngày
+      </div>
+      <div class="text-xs md:text-sm text-gray-200">
+        🔥 Hôm nay còn <span id="vipSpots">3</span> xe đẹp cho các tuyến dài: TP.HCM, Đà Lạt, Nha Trang, Cam Ranh
+      </div>
+    </div>
+  </div>
+
   <!-- HERO -->
   <section class="max-w-6xl mx-auto mb-6">
     <div class="hero-bg rounded-3xl shadow-2xl overflow-hidden">
       <div class="px-6 py-10 md:px-10 md:py-16 text-white">
         <div class="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-2 text-sm mb-5">
-          ⭐ Dịch vụ xe riêng được nhiều khách tin chọn
+          ⭐ Dịch vụ xe riêng cao cấp được nhiều khách chọn
         </div>
 
         <div class="max-w-3xl">
           <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
-            Xe riêng Mũi Né đi tỉnh – Đón tận nơi
+            Xe riêng VIP Mũi Né đi tỉnh – Đón tận nơi
           </h1>
 
           <p class="mt-4 text-base md:text-lg text-gray-200 leading-relaxed">
             Chuyên xe riêng đi TP.HCM, Đà Lạt, Nha Trang, Cam Ranh, Vũng Tàu, Cần Thơ và nhiều tuyến khác.
-            Không ghép khách, chủ động thời gian, xe sạch, tài xế quen tuyến và hỗ trợ nhanh qua Zalo hoặc WhatsApp.
+            Không ghép khách, xe sạch đẹp, tài xế quen tuyến, hỗ trợ nhanh qua Zalo hoặc WhatsApp và xác nhận rất gọn cho khách Việt lẫn khách Tây.
           </p>
 
           <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6">
-            <div class="bg-white/10 rounded-2xl p-3 text-center border border-white/10">
+            <div class="hero-stat rounded-2xl p-3 text-center">
               <div class="text-xl font-bold">500+</div>
               <div class="text-xs text-gray-200">Khách hài lòng</div>
             </div>
-            <div class="bg-white/10 rounded-2xl p-3 text-center border border-white/10">
+            <div class="hero-stat rounded-2xl p-3 text-center">
               <div class="text-xl font-bold">24/7</div>
               <div class="text-xs text-gray-200">Hỗ trợ Zalo</div>
             </div>
-            <div class="bg-white/10 rounded-2xl p-3 text-center border border-white/10">
+            <div class="hero-stat rounded-2xl p-3 text-center">
               <div class="text-xl font-bold">100%</div>
               <div class="text-xs text-gray-200">Chuyến riêng</div>
             </div>
-            <div class="bg-white/10 rounded-2xl p-3 text-center border border-white/10">
+            <div class="hero-stat rounded-2xl p-3 text-center">
               <div class="text-xl font-bold">0</div>
               <div class="text-xs text-gray-200">Không cần cọc</div>
             </div>
@@ -253,8 +396,8 @@
 
           <div class="flex flex-col sm:flex-row gap-3 mt-7">
             <a href="#booking"
-               class="bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-2xl font-bold text-center shadow-lg">
-              🚀 Xem giá & đặt xe
+               class="vip-cta text-white px-6 py-4 rounded-2xl font-bold text-center">
+              🚀 Xem giá VIP & đặt xe
             </a>
             <a href="https://zalo.me/0362772956"
                target="_blank"
@@ -266,7 +409,7 @@
                target="_blank"
                onclick="trackWhatsAppTop()"
                class="whatsapp-btn whatsapp-glow bg-green-500 text-white px-6 py-4 rounded-2xl font-bold text-center shadow-lg hover:bg-green-600">
-              🟢 Đặt qua WhatsApp
+              🟢 Đặt VIP qua WhatsApp
             </a>
           </div>
 
@@ -280,16 +423,16 @@
 
   <!-- QUICK TRUST -->
   <section class="max-w-6xl mx-auto grid md:grid-cols-3 gap-4 mb-6">
-    <div class="glass rounded-2xl p-5 shadow border border-white/60">
-      <div class="text-lg font-bold mb-2">✅ Đặt xe nhanh</div>
+    <div class="vip-card rounded-2xl p-5">
+      <div class="text-lg font-bold mb-2">✨ Chốt xe nhanh</div>
       <div class="text-sm text-gray-600">Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.</div>
     </div>
-    <div class="glass rounded-2xl p-5 shadow border border-white/60">
-      <div class="text-lg font-bold mb-2">🚘 Xe riêng sạch sẽ</div>
+    <div class="vip-card rounded-2xl p-5">
+      <div class="text-lg font-bold mb-2">👑 Xe riêng cao cấp</div>
       <div class="text-sm text-gray-600">Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.</div>
     </div>
-    <div class="glass rounded-2xl p-5 shadow border border-white/60">
-      <div class="text-lg font-bold mb-2">💵 Giá trọn gói</div>
+    <div class="vip-card rounded-2xl p-5">
+      <div class="text-lg font-bold mb-2">🛡 Giá rõ ràng</div>
       <div class="text-sm text-gray-600">Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.</div>
     </div>
   </section>
@@ -297,154 +440,161 @@
   <section class="max-w-6xl mx-auto grid lg:grid-cols-5 gap-6 mb-6">
     <!-- ROUTES -->
     <div class="lg:col-span-3">
-      <div class="flex items-center justify-between mb-4">
-        <h2 class="text-2xl font-extrabold text-gray-900">Tuyến đường phổ biến</h2>
-        <div class="text-sm text-gray-500">Bấm chọn tuyến để xem giá nhanh</div>
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
+        <div>
+          <h2 class="text-2xl font-extrabold text-gray-900">Tuyến đường phổ biến</h2>
+          <div class="text-sm text-gray-500 mt-1">Bấm chọn tuyến để xem giá nhanh và đổ xuống form</div>
+        </div>
+        <div class="section-chip">⚡ Chạm để tự chọn tuyến</div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-white rounded-2xl shadow p-3 border border-gray-100 mb-4">
+        <input id="routeSearch" type="text" placeholder="Tìm tuyến: HCM, Sài Gòn, Đà Lạt, Mũi Né..." class="soft-input w-full p-3 border border-gray-200 rounded-xl focus:outline-none">
+      </div>
 
-        <div onclick="selectRoute('Ho Chi Minh City → Mui Ne')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+      <div class="grid md:grid-cols-2 gap-4" id="routeGrid">
+
+        <div onclick="selectRoute('Ho Chi Minh City → Mui Ne')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Ho Chi Minh City → Mui Ne</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Ho Chi Minh City → Nha Trang')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Ho Chi Minh City → Nha Trang')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Ho Chi Minh City → Nha Trang</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Ho Chi Minh City → Da Lat')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Ho Chi Minh City → Da Lat')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Ho Chi Minh City → Da Lat</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Ho Chi Minh City → Cam Ranh')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Ho Chi Minh City → Cam Ranh')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Ho Chi Minh City → Cam Ranh</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Ho Chi Minh City → Vung Tau')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Ho Chi Minh City → Vung Tau')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Ho Chi Minh City → Vung Tau</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Ho Chi Minh City → Can Tho')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Ho Chi Minh City → Can Tho')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Ho Chi Minh City → Can Tho</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Can Tho → Ho Chi Minh City')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Can Tho → Ho Chi Minh City')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Can Tho → Ho Chi Minh City</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Mui Ne → Da Lat')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Mui Ne → Da Lat')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Mui Ne → Da Lat</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Mui Ne → Nha Trang')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Mui Ne → Nha Trang')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Mui Ne → Nha Trang</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Mui Ne → Cam Ranh')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Mui Ne → Cam Ranh')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Mui Ne → Cam Ranh</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Mui Ne → Ho Chi Minh City')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Mui Ne → Ho Chi Minh City')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Mui Ne → Ho Chi Minh City</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Mui Ne → Vung Tau')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Mui Ne → Vung Tau')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Mui Ne → Vung Tau</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Da Lat → Mui Ne')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Da Lat → Mui Ne')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Da Lat → Mui Ne</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Da Lat → Nha Trang')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Da Lat → Nha Trang')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Da Lat → Nha Trang</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Da Lat → Ho Chi Minh City')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Da Lat → Ho Chi Minh City')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Da Lat → Ho Chi Minh City</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Da Lat → Vung Tau')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Da Lat → Vung Tau')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Da Lat → Vung Tau</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Nha Trang → Mui Ne')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Nha Trang → Mui Ne')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Nha Trang → Mui Ne</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Nha Trang → Da Lat')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Nha Trang → Da Lat')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Nha Trang → Da Lat</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Nha Trang → Ho Chi Minh City')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Nha Trang → Ho Chi Minh City')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Nha Trang → Ho Chi Minh City</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Nha Trang → Vung Tau')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Nha Trang → Vung Tau')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Nha Trang → Vung Tau</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Cam Ranh → Mui Ne')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Cam Ranh → Mui Ne')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Cam Ranh → Mui Ne</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Cam Ranh → Da Lat')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Cam Ranh → Da Lat')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Cam Ranh → Da Lat</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Cam Ranh → Ho Chi Minh City')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Cam Ranh → Ho Chi Minh City')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Cam Ranh → Ho Chi Minh City</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Cam Ranh → Vung Tau')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Cam Ranh → Vung Tau')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Cam Ranh → Vung Tau</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Vung Tau → Da Lat')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Vung Tau → Da Lat')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Vung Tau → Da Lat</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Vung Tau → Ho Chi Minh City')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Vung Tau → Ho Chi Minh City')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Vung Tau → Ho Chi Minh City</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Vung Tau → Mui Ne')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Vung Tau → Mui Ne')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Vung Tau → Mui Ne</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Vung Tau → Nha Trang')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Vung Tau → Nha Trang')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Vung Tau → Nha Trang</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
 
-        <div onclick="selectRoute('Vung Tau → Cam Ranh')" class="route-card card-hover bg-white p-5 rounded-2xl shadow cursor-pointer">
+        <div onclick="selectRoute('Vung Tau → Cam Ranh')" class="route-card vip-card card-hover bg-white p-5 rounded-2xl cursor-pointer">
           <div class="font-bold text-lg">📍 Vung Tau → Cam Ranh</div>
           <div class="text-sm text-gray-500 mt-1">Liên hệ Zalo nhanh</div>
         </div>
@@ -453,19 +603,19 @@
 
     <!-- BOOKING FORM -->
     <div class="lg:col-span-2">
-      <div id="booking" class="sticky top-4 bg-white rounded-3xl shadow-2xl border border-gray-100 p-6">
+      <div id="booking" class="sticky top-4 booking-shell rounded-3xl shadow-2xl border border-gray-100 p-6">
         <div class="text-center mb-5">
           <div class="inline-block bg-green-100 text-green-700 font-semibold px-4 py-1 rounded-full text-sm">
-            Đặt xe ngay
+            Booking VIP
           </div>
-          <h2 class="text-2xl font-extrabold mt-3 text-gray-900">Xem giá & đặt xe ngay</h2>
-          <p class="text-sm text-gray-500 mt-1">Phản hồi nhanh qua Zalo hoặc WhatsApp • Không phát sinh phí</p>
+          <h2 class="text-2xl font-extrabold mt-3 text-gray-900">Xem giá VIP & giữ xe ngay</h2>
+          <p class="text-sm text-gray-500 mt-1">Xác nhận nhanh qua Zalo hoặc WhatsApp • Giá rõ ràng • Không ghép khách</p>
         </div>
 
         <div class="space-y-3">
-          <input id="name" placeholder="Tên của bạn *" class="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500">
+          <input id="name" placeholder="Tên của bạn *" class="soft-input w-full p-3 border border-gray-200 rounded-xl focus:outline-none">
 
-          <select id="passengers" class="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500">
+          <select id="passengers" class="soft-input w-full p-3 border border-gray-200 rounded-xl focus:outline-none">
             <option value="">Số khách</option>
             <option value="1-3">1 - 3 người</option>
             <option value="4-6">4 - 6 người</option>
@@ -473,11 +623,11 @@
             <option value="10+">Trên 10 người</option>
           </select>
 
-          <select id="route" class="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500">
+          <select id="route" class="soft-input w-full p-3 border border-gray-200 rounded-xl focus:outline-none">
             <option value="">Chọn tuyến *</option>
           </select>
 
-          <select id="car" class="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500">
+          <select id="car" class="soft-input w-full p-3 border border-gray-200 rounded-xl focus:outline-none">
             <option value="">Loại xe *</option>
             <option>4 chỗ</option>
             <option>7 chỗ</option>
@@ -494,12 +644,13 @@
             <div class="text-xs text-gray-500 mt-1">Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại</div>
           </div>
 
+
           <div class="grid sm:grid-cols-2 gap-3">
             <button onclick="sendZalo()" class="zalo-btn w-full bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-2xl font-extrabold text-lg shadow-lg">
-              💬 Gửi qua Zalo
+              💬 Chốt qua Zalo
             </button>
             <button onclick="sendWhatsApp()" class="whatsapp-btn whatsapp-glow w-full bg-green-500 hover:bg-green-600 text-white p-4 rounded-2xl font-extrabold text-lg shadow-lg">
-              🟢 Booking bằng WhatsApp
+              🟢 Chốt VIP qua WhatsApp
             </button>
           </div>
 
@@ -508,6 +659,35 @@
             <div>✔ Không cần cọc</div>
             <div>✔ Xe riêng</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="max-w-6xl mx-auto mb-6">
+    <div class="bg-white rounded-3xl shadow-xl p-6 border border-gray-100">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-2xl font-extrabold text-gray-900">Trải nghiệm VIP dành cho khách đặt xe riêng</h2>
+        <div class="section-chip">👑 Premium Service</div>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="premium-feature rounded-2xl p-5">
+          <div class="text-lg font-extrabold text-gray-900">Đón tận nơi</div>
+          <div class="text-sm text-gray-600 mt-2">Khách sạn, nhà riêng, sân bay hoặc điểm hẹn linh hoạt.</div>
+        </div>
+        <div class="premium-feature rounded-2xl p-5">
+          <div class="text-lg font-extrabold text-gray-900">Xe sạch đẹp</div>
+          <div class="text-sm text-gray-600 mt-2">Phù hợp gia đình, nhóm bạn và khách muốn đi thoải mái.</div>
+        </div>
+        <div class="premium-feature rounded-2xl p-5">
+          <div class="text-lg font-extrabold text-gray-900">Lái xe quen tuyến</div>
+          <div class="text-sm text-gray-600 mt-2">Đi các tuyến dài mượt hơn, hỗ trợ đón nhanh tại Mũi Né.</div>
+        </div>
+        <div class="premium-feature rounded-2xl p-5">
+          <div class="text-lg font-extrabold text-gray-900">Báo giá rõ ràng</div>
+          <div class="text-sm text-gray-600 mt-2">Biết giá trước, xác nhận nhanh, không rườm rà.</div>
         </div>
       </div>
     </div>
@@ -522,15 +702,15 @@
       </div>
 
       <div class="grid md:grid-cols-3 gap-4">
-        <div class="bg-gray-50 rounded-2xl p-5 border">
+        <div class="review-premium rounded-2xl p-5">
           <div class="text-yellow-500 mb-2">★★★★★</div>
           <div class="text-sm text-gray-700">“Xe sạch, tài xế đúng giờ, đặt xe nhanh qua Zalo rất tiện.”</div>
         </div>
-        <div class="bg-gray-50 rounded-2xl p-5 border">
+        <div class="review-premium rounded-2xl p-5">
           <div class="text-yellow-500 mb-2">★★★★★</div>
           <div class="text-sm text-gray-700">“Đi gia đình rất thoải mái, không phải chờ ghép khách, hỗ trợ nhanh.”</div>
         </div>
-        <div class="bg-gray-50 rounded-2xl p-5 border">
+        <div class="review-premium rounded-2xl p-5">
           <div class="text-yellow-500 mb-2">★★★★★</div>
           <div class="text-sm text-gray-700">“Liên hệ dễ, tài xế chạy cẩn thận, lần sau mình sẽ đặt tiếp.”</div>
         </div>
@@ -563,6 +743,48 @@
             <div><strong>4.</strong> Gửi thông tin qua Zalo hoặc WhatsApp</div>
             <div><strong>5.</strong> Nhận xác nhận nhanh từ bên xe</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-6xl mx-auto mb-6">
+    <div class="bg-white rounded-3xl shadow-xl p-6 border border-gray-100">
+      <div class="flex items-center justify-between mb-5">
+        <h2 class="text-2xl font-extrabold text-gray-900">Câu hỏi thường gặp</h2>
+        <div class="text-sm text-gray-500">Giúp khách chốt nhanh hơn</div>
+      </div>
+
+      <div class="space-y-3">
+        <details class="faq-item rounded-2xl border border-gray-200 p-4">
+          <summary class="font-bold text-gray-900">Giá trên web đã là giá cuối chưa?</summary>
+          <div class="text-sm text-gray-600 mt-2">Đây là giá dự kiến để khách tham khảo nhanh. Giá cuối cùng sẽ được xác nhận lại qua Zalo, WhatsApp hoặc điện thoại trước khi chốt chuyến.</div>
+        </details>
+        <details class="faq-item rounded-2xl border border-gray-200 p-4">
+          <summary class="font-bold text-gray-900">Có cần đặt cọc không?</summary>
+          <div class="text-sm text-gray-600 mt-2">Đa số tuyến thông thường không cần cọc. Một số chuyến đặc biệt hoặc đi xa nhiều điểm có thể cần xác nhận thêm trước khi giữ xe.</div>
+        </details>
+        <details class="faq-item rounded-2xl border border-gray-200 p-4">
+          <summary class="font-bold text-gray-900">Có đón tận khách sạn hoặc resort không?</summary>
+          <div class="text-sm text-gray-600 mt-2">Có. Bạn chỉ cần gửi tên khách sạn, resort hoặc vị trí đón, bên xe sẽ xác nhận điểm đón phù hợp.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="max-w-6xl mx-auto mb-6">
+    <div class="vip-strip rounded-3xl px-6 py-6 md:px-8 md:py-7">
+      <div class="grid md:grid-cols-[1.4fr,auto] gap-5 items-center">
+        <div>
+          <div class="text-sm font-semibold gold-text mb-2">READY TO BOOK</div>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white">Chỉ cần chọn tuyến, chọn xe và nhắn ngay để giữ xe đẹp</h2>
+          <p class="text-sm md:text-base text-gray-200 mt-2">Hợp cho khách cần xe riêng nhanh, đi gia đình, đi sân bay hoặc đi tỉnh không muốn ghép khách.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="https://wa.me/84362772956" target="_blank" onclick="trackWhatsAppTop()" class="whatsapp-btn whatsapp-glow bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-2xl font-bold text-center shadow-lg">🟢 WhatsApp</a>
+          <a href="https://zalo.me/0362772956" target="_blank" onclick="trackZaloTop()" class="zalo-btn bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-2xl font-bold text-center shadow-lg">💬 Zalo</a>
         </div>
       </div>
     </div>
@@ -658,6 +880,12 @@
 
   <script>
     let selectedPrice = 0;
+    const vipSpots = document.getElementById('vipSpots');
+
+
+    function formatVND(value) {
+      return Number(value || 0).toLocaleString('vi-VN') + ' VND';
+    }
 
     const routeSelect = document.getElementById('route');
     const carSelect = document.getElementById('car');
@@ -665,6 +893,7 @@
     const priceBox = document.getElementById('price');
     const vipBadge = document.getElementById('vipBadge');
     const routeCards = document.querySelectorAll('.route-card');
+    const routeSearch = document.getElementById('routeSearch');
 
     routeCards.forEach(r => {
       let text = r.querySelector('.font-bold').innerText.replace('📍 ', '').trim();
@@ -736,6 +965,60 @@
 
     renderRouteCardPrices();
 
+    function setActiveRouteCard(routeName) {
+      routeCards.forEach(card => {
+        const cardRoute = card.querySelector('.font-bold').innerText.replace('📍 ', '').trim();
+        card.classList.toggle('active-route', cardRoute === routeName);
+      });
+    }
+
+    function normalizeSearchText(str) {
+      return (str || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[̀-ͯ]/g, '')
+        .replace(/đ/g, 'd')
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    function buildRouteKeywords(routeName) {
+      const map = {
+        'Ho Chi Minh City': 'hcm sai gon tphcm tp hcm ho chi minh thanh pho ho chi minh sg saigon',
+        'Mui Ne': 'mui ne muine mui-ne phan thiet phanthiet',
+        'Da Lat': 'da lat dalat da-lat',
+        'Nha Trang': 'nha trang nhatrang nha-trang',
+        'Cam Ranh': 'cam ranh camranh cam-ranh san bay cam ranh',
+        'Vung Tau': 'vung tau vungtau vung-tau',
+        'Can Tho': 'can tho cantho can-tho'
+      };
+
+      let extra = '';
+      Object.entries(map).forEach(([key, value]) => {
+        if (routeName.includes(key)) extra += ' ' + value;
+      });
+      return normalizeSearchText(routeName + ' ' + extra);
+    }
+
+    if (routeSearch) {
+      routeSearch.addEventListener('input', function () {
+        const keyword = normalizeSearchText(this.value);
+        routeCards.forEach(card => {
+          const routeTitle = card.querySelector('.font-bold')?.innerText.replace('📍 ', '').trim() || '';
+          const searchableText = buildRouteKeywords(routeTitle + ' ' + card.innerText);
+          card.style.display = !keyword || searchableText.includes(keyword) ? '' : 'none';
+        });
+      });
+    }
+
+    if (document.getElementById('vipSpots')) {
+      const vipSpotsEl = document.getElementById('vipSpots');
+      const vipCounts = [1, 2, 3];
+      vipSpotsEl.textContent = vipCounts[new Date().getDate() % vipCounts.length];
+    }
+
+
     function updatePrice() {
       const route = routeSelect.value;
       const car = carSelect.value;
@@ -771,8 +1054,9 @@
 
       selectedPrice = finalPrice;
       const usd = Math.round(finalPrice / 25000);
+      setActiveRouteCard(route);
 
-      priceBox.innerText = "$" + usd + " (~" + finalPrice.toLocaleString() + " VND)";
+      priceBox.innerText = '$' + usd + ' (~' + formatVND(finalPrice) + ')';
     }
 
     function selectRoute(route) {
@@ -809,7 +1093,7 @@
 
     function sendZalo() {
       const nameInput = document.getElementById("name").value.trim();
-      const passengersInput = document.getElementById("passengers").value;
+      const passengersInput = document.getElementById("passengers").value || "Chưa chọn";
       const routeInput = routeSelect.value;
       const carInput = document.getElementById("car").value;
 
@@ -826,7 +1110,7 @@
         return;
       }
 
-      const displayPrice = selectedPrice > 0 ? selectedPrice.toLocaleString() + " VND" : "Please confirm";
+      const displayPrice = selectedPrice > 0 ? formatVND(selectedPrice) : "Vui lòng xác nhận";
       let msg =
         "🚗 ĐẶT XE RIÊNG\n" +
         "Tên: " + nameInput +
@@ -851,7 +1135,7 @@
 
     function sendWhatsApp() {
       const nameInput = document.getElementById("name").value.trim();
-      const passengersInput = document.getElementById("passengers").value;
+      const passengersInput = document.getElementById("passengers").value || "Chưa chọn";
       const routeInput = routeSelect.value;
       const carInput = document.getElementById("car").value;
 
@@ -868,7 +1152,7 @@
         return;
       }
 
-      const displayPrice = selectedPrice > 0 ? selectedPrice.toLocaleString("vi-VN") + " VND" : "Vui lòng xác nhận";
+      const displayPrice = selectedPrice > 0 ? formatVND(selectedPrice) : "Vui lòng xác nhận";
       const msg =
         "🚗 ĐẶT XE RIÊNG\n" +
         "Tên: " + nameInput +
@@ -1010,13 +1294,13 @@ const uiText = {
 };
 
 const textMaps = {
-      vi: {"English": "Tiếng Việt", "🚕 Mui Ne Private Car Service": "🚕 Dịch vụ xe riêng Mũi Né", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "An toàn • Riêng tư • Hỗ trợ tiếng Anh • Giá cố định", "📞 Gọi ngay": "📞 Gọi", "💬 Zalo": "💬 Zalo", "⭐ Dịch vụ xe riêng được nhiều khách tin chọn": "⭐ Được nhiều du khách tại Mũi Né tin chọn", "Xe riêng Mũi Né đi tỉnh – Đón tận nơi": "Dịch vụ xe riêng cao cấp tại Mũi Né", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "Đặt xe riêng thoải mái đi TP.HCM, Đà Lạt, Nha Trang, Cam Ranh, Cần Thơ và nhiều nơi khác.\n            Phản hồi nhanh qua WhatsApp, xe sạch, tài xế chuyên nghiệp và không cần cọc.", "Khách hài lòng": "Khách hài lòng", "Hỗ trợ Zalo": "Hỗ trợ Zalo", "Chuyến riêng": "Chuyến riêng", "Không cần cọc": "Không cọc", "🚀 Xem giá & đặt xe": "🚀 Xem giá & Đặt xe ngay", "💬 Nhắn Zalo ngay": "💬 Nhắn Zalo ngay", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "Ưu đãi hôm nay • Giờ đi linh hoạt • Đưa đón tận nơi", "✅ Đặt xe nhanh": "✅ Đặt xe dễ dàng", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "Chọn tuyến, xem giá và xác nhận trên WhatsApp chỉ trong vài phút.", "🚘 Xe riêng sạch sẽ": "🚘 Xe thoải mái", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "Có xe 4 chỗ, 7 chỗ, limousine và van cho mọi nhóm khách.", "💵 Giá trọn gói": "💵 Giá rõ ràng", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "Giá cố định, không phí ẩn, thanh toán sau chuyến đi.", "Dịch vụ nổi bật tại Mũi Né": "Trải nghiệm nổi bật ở Mũi Né", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "Đặt riêng • Xác nhận nhanh • Hỗ trợ tiếng Anh", "🏝 Jeep Tour": "🏝 Tour Jeep", "Dịch vụ riêng tại Mũi Né": "Trải nghiệm riêng tại Mũi Né", "Most Booked": "Đặt nhiều nhất", "✔ White Sand Dunes": "✔ Đồi cát trắng", "✔ Red Sand Dunes": "✔ Đồi cát đỏ", "✔ Fairy Stream": "✔ Suối Tiên", "✔ Fishing Village": "✔ Làng chài", "Check Availability": "Kiểm tra chỗ trống", "🏔 Ta Cu Mountain": "🏔 Núi Tà Cú", "Chuyến đi riêng": "Chuyến đi riêng", "Recommended": "Đề xuất", "✔ Reclining Buddha": "✔ Tượng Phật nằm", "✔ Cable Car": "✔ Cáp treo", "✔ Mountain View": "✔ View núi đẹp", "🎣 Fishing Experience": "🎣 Trải nghiệm câu cá", "Thư giãn và trải nghiệm riêng": "Thư giãn và tự tay câu cá", "Unique": "Độc đáo", "✔ Freshwater fishing": "✔ Câu cá nước ngọt", "✔ Equipment included": "✔ Có sẵn dụng cụ", "✔ Relaxing nature": "✔ Không gian thiên nhiên", "✔ Catch & cook": "✔ Câu xong có thể nấu", "Tuyến đường phổ biến": "Các tuyến phổ biến", "Bấm chọn tuyến để xem giá nhanh": "Bấm chọn tuyến để điền form đặt xe", "Liên hệ Zalo nhanh": "Đặt nhanh qua WhatsApp", "📍 Ho Chi Minh City → Mui Ne": "📍 TP.HCM → Mũi Né", "📍 Ho Chi Minh City → Nha Trang": "📍 TP.HCM → Nha Trang", "📍 Ho Chi Minh City → Da Lat": "📍 TP.HCM → Đà Lạt", "📍 Ho Chi Minh City → Cam Ranh": "📍 TP.HCM → Cam Ranh", "📍 Ho Chi Minh City → Vung Tau": "📍 TP.HCM → Vũng Tàu", "📍 Ho Chi Minh City → Can Tho": "📍 TP.HCM → Cần Thơ", "📍 Can Tho → Ho Chi Minh City": "📍 Cần Thơ → TP.HCM", "📍 Mui Ne → Da Lat": "📍 Mũi Né → Đà Lạt", "📍 Mui Ne → Nha Trang": "📍 Mũi Né → Nha Trang", "📍 Mui Ne → Cam Ranh": "📍 Mũi Né → Cam Ranh", "📍 Mui Ne → Ho Chi Minh City": "📍 Mũi Né → TP.HCM", "📍 Mui Ne → Vung Tau": "📍 Mũi Né → Vũng Tàu", "📍 Da Lat → Mui Ne": "📍 Đà Lạt → Mũi Né", "📍 Da Lat → Nha Trang": "📍 Đà Lạt → Nha Trang", "📍 Da Lat → Ho Chi Minh City": "📍 Đà Lạt → TP.HCM", "📍 Da Lat → Vung Tau": "📍 Đà Lạt → Vũng Tàu", "📍 Nha Trang → Mui Ne": "📍 Nha Trang → Mũi Né", "📍 Nha Trang → Da Lat": "📍 Nha Trang → Đà Lạt", "📍 Nha Trang → Ho Chi Minh City": "📍 Nha Trang → TP.HCM", "📍 Nha Trang → Vung Tau": "📍 Nha Trang → Vũng Tàu", "📍 Cam Ranh → Mui Ne": "📍 Cam Ranh → Mũi Né", "📍 Cam Ranh → Da Lat": "📍 Cam Ranh → Đà Lạt", "📍 Cam Ranh → Ho Chi Minh City": "📍 Cam Ranh → TP.HCM", "📍 Cam Ranh → Vung Tau": "📍 Cam Ranh → Vũng Tàu", "📍 Vung Tau → Da Lat": "📍 Vũng Tàu → Đà Lạt", "📍 Vung Tau → Ho Chi Minh City": "📍 Vũng Tàu → TP.HCM", "📍 Vung Tau → Mui Ne": "📍 Vũng Tàu → Mũi Né", "📍 Vung Tau → Nha Trang": "📍 Vũng Tàu → Nha Trang", "📍 Vung Tau → Cam Ranh": "📍 Vũng Tàu → Cam Ranh", "Đặt xe ngay": "Đặt xe ngay", "Xem giá & đặt xe ngay": "Xem giá & Giữ chỗ", "Phản hồi nhanh qua Zalo hoặc WhatsApp • Không phát sinh phí": "Phản hồi nhanh qua Zalo hoặc WhatsApp • Không phí ẩn", "Số khách": "Số khách", "1 - 3 người": "1 - 3 người", "4 - 6 người": "4 - 6 người", "7 - 10 người": "7 - 10 người", "Trên 10 người": "Trên 10 người", "Chọn tuyến *": "Chọn tuyến *", "Loại xe *": "Loại xe *", "4 chỗ": "4 chỗ", "7 chỗ": "7 chỗ", "Limousine 9 chỗ VIP": "Limousine 9 chỗ", "16 chỗ": "16 chỗ", "Giá dự kiến": "Giá dự kiến", "Chọn tuyến và loại xe": "Chọn tuyến và loại xe", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 Đặt qua WhatsApp", "✔ Phản hồi nhanh": "✔ Phản hồi nhanh", "✔ Xe riêng": "✔ Chuyến riêng", "Khách hàng nói gì": "Khách nói gì về chúng tôi", "Phản hồi thực tế": "Đánh giá thực tế từ khách hàng", "“Xe sạch, tài xế đúng giờ, đặt xe nhanh qua Zalo rất tiện.”": "“Dịch vụ rất tốt, tài xế đúng giờ và xe rất sạch. Đặt qua WhatsApp rất dễ.”", "“Đi gia đình rất thoải mái, không phải chờ ghép khách, hỗ trợ nhanh.”": "“Giá tốt nhất ở Mũi Né và chuyến đi rất êm. Rất đáng giới thiệu cho du khách nước ngoài.”", "“Liên hệ dễ, tài xế chạy cẩn thận, lần sau mình sẽ đặt tiếp.”": "“Phản hồi nhanh, tài xế chuyên nghiệp và đi an toàn. Lần sau tôi sẽ đặt lại.”", "Vì sao nên chọn xe của chúng tôi": "Vì sao chọn chúng tôi", "✔ Xe riêng đi tỉnh uy tín tại Mũi Né": "✔ Dịch vụ xe riêng uy tín tại Mũi Né", "✔ Hỗ trợ nhanh qua Zalo, WhatsApp và điện thoại": "✔ Hỗ trợ nhanh qua Zalo, WhatsApp và điện thoại", "✔ Đón tận nơi – trả tận nơi": "✔ Đón và trả tận nơi", "✔ Chủ động giờ đi": "✔ Giờ đi linh hoạt", "✔ Giá trọn gói, không phát sinh": "✔ Giá cố định không phí ẩn", "✔ Thanh toán linh hoạt": "✔ Thanh toán sau chuyến đi", "Cách đặt xe": "Cách đặt xe", "Chọn tuyến đường": "Chọn tuyến đường", "Chọn số khách và loại xe": "Chọn số khách và loại xe", "Xem giá dự kiến": "Xem giá dự kiến", "Gửi thông tin qua Zalo hoặc WhatsApp": "Gửi đặt xe qua WhatsApp", "Nhận xác nhận nhanh từ bên xe": "Nhận xác nhận nhanh từ chúng tôi", "Vị trí của chúng tôi": "Tìm chúng tôi trên bản đồ", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "Điểm đón thuận tiện tại Mũi Né", "Đón khách & Liên hệ": "Đón khách & Liên hệ", "Bạn có thể xem vị trí trên Google Maps để tiện liên hệ, hẹn điểm đón và xác nhận chuyến đi nhanh hơn.": "Bạn có thể dễ dàng tìm vị trí của chúng tôi trên Google Maps để hỗ trợ đón khách, liên hệ nhanh và xác nhận đặt xe thuận tiện trước chuyến đi.", "📍 Điểm đón tại Mũi Né (xác nhận qua Zalo/WhatsApp)": "📍 MUI NE PRIVATE CAR, Mũi Né, Phan Thiết, Bình Thuận", "✔ Dễ tìm": "✔ Dễ tìm", "✔ Hỗ trợ Zalo nhanh": "✔ Hỗ trợ WhatsApp nhanh", "✔ Hẹn điểm đón linh hoạt": "✔ Phối hợp điểm đón thuận tiện", "Mở Google Maps": "Mở Google Maps", "Hỏi điểm đón qua Zalo": "Hỏi điểm đón qua Zalo", "": ""},
-      ru: {"🚕 Mui Ne Private Car Service": "🚕 Частный трансфер Муйне", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "Безопасно • Индивидуально • Поддержка на английском • Фиксированная цена", "📞 Gọi ngay": "📞 Позвонить", "💬 Zalo": "💬 Zalo", "⭐ Dịch vụ xe riêng được nhiều khách tin chọn": "⭐ Нам доверяют иностранные путешественники в Муйне", "Xe riêng Mũi Né đi tỉnh – Đón tận nơi": "Премиальный сервис частного трансфера в Муйне", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "Закажите комфортный частный трансфер в Хошимин, Далат, Нячанг, Камрань, Кантхо и другие направления.\n            Быстрый ответ в WhatsApp, чистые машины, профессиональные водители и без предоплаты.", "Khách hài lòng": "Довольных клиентов", "Hỗ trợ Zalo": "Поддержка в WhatsApp", "Chuyến riêng": "Индивидуальный трансфер", "Không cần cọc": "Без предоплаты", "🚀 Xem giá & đặt xe": "🚀 Узнать цену и забронировать", "💬 Nhắn Zalo ngay": "💬 Написать в WhatsApp", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "Специальная скидка сегодня • Гибкое время выезда • От двери до двери", "✅ Đặt xe nhanh": "✅ Легкое бронирование", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "Выберите маршрут, узнайте цену и подтвердите в WhatsApp за пару минут.", "🚘 Xe riêng sạch sẽ": "🚘 Комфортные автомобили", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "Авто на 4 и 7 мест, лимузин и микроавтобус для любой группы.", "💵 Giá trọn gói": "💵 Прозрачные цены", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "Фиксированная цена, без скрытых платежей, оплата после поездки.", "Dịch vụ nổi bật tại Mũi Né": "Лучшие впечатления в Муйне", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "Индивидуальное бронирование • Быстрое подтверждение • Поддержка на английском", "🏝 Jeep Tour": "🏝 Джип-тур", "Dịch vụ riêng tại Mũi Né": "Индивидуальная экскурсия в Муйне", "Most Booked": "Самое популярное", "✔ White Sand Dunes": "✔ Белые дюны", "✔ Red Sand Dunes": "✔ Красные дюны", "✔ Fairy Stream": "✔ Ручей Фей", "✔ Fishing Village": "✔ Рыбацкая деревня", "Check Availability": "Проверить доступность", "🏔 Ta Cu Mountain": "🏔 Гора Та Ку", "Chuyến đi riêng": "Индивидуальная поездка", "Recommended": "Рекомендуем", "✔ Reclining Buddha": "✔ Лежащий Будда", "✔ Cable Car": "✔ Канатная дорога", "✔ Mountain View": "✔ Горный вид", "✔ Chuyến riêng": "✔ Индивидуальный трансфер", "🎣 Fishing Experience": "🎣 Рыбалка", "Thư giãn và trải nghiệm riêng": "Отдых и рыбалка своими руками", "Unique": "Уникально", "✔ Freshwater fishing": "✔ Пресноводная рыбалка", "✔ Equipment included": "✔ Снаряжение включено", "✔ Relaxing nature": "✔ Спокойная природа", "✔ Catch & cook": "✔ Поймал и приготовил", "Tuyến đường phổ biến": "Популярные маршруты", "Bấm chọn tuyến để xem giá nhanh": "Нажмите маршрут, чтобы заполнить форму бронирования", "Liên hệ Zalo nhanh": "Быстрое бронирование через WhatsApp", "📍 Ho Chi Minh City → Mui Ne": "📍 Хошимин → Муйне", "📍 Ho Chi Minh City → Nha Trang": "📍 Хошимин → Нячанг", "📍 Ho Chi Minh City → Da Lat": "📍 Хошимин → Далат", "📍 Ho Chi Minh City → Cam Ranh": "📍 Хошимин → Камрань", "📍 Ho Chi Minh City → Vung Tau": "📍 Хошимин → Вунгтау", "📍 Ho Chi Minh City → Can Tho": "📍 Хошимин → Кантхо", "📍 Can Tho → Ho Chi Minh City": "📍 Кантхо → Хошимин", "📍 Mui Ne → Da Lat": "📍 Муйне → Далат", "📍 Mui Ne → Nha Trang": "📍 Муйне → Нячанг", "📍 Mui Ne → Cam Ranh": "📍 Муйне → Камрань", "📍 Mui Ne → Ho Chi Minh City": "📍 Муйне → Хошимин", "📍 Mui Ne → Vung Tau": "📍 Муйне → Вунгтау", "📍 Da Lat → Mui Ne": "📍 Далат → Муйне", "📍 Da Lat → Nha Trang": "📍 Далат → Нячанг", "📍 Da Lat → Ho Chi Minh City": "📍 Далат → Хошимин", "📍 Da Lat → Vung Tau": "📍 Далат → Вунгтау", "📍 Nha Trang → Mui Ne": "📍 Нячанг → Муйне", "📍 Nha Trang → Da Lat": "📍 Нячанг → Далат", "📍 Nha Trang → Ho Chi Minh City": "📍 Нячанг → Хошимин", "📍 Nha Trang → Vung Tau": "📍 Нячанг → Вунгтау", "📍 Cam Ranh → Mui Ne": "📍 Камрань → Муйне", "📍 Cam Ranh → Da Lat": "📍 Камрань → Далат", "📍 Cam Ranh → Ho Chi Minh City": "📍 Камрань → Хошимин", "📍 Cam Ranh → Vung Tau": "📍 Камрань → Вунгтау", "📍 Vung Tau → Da Lat": "📍 Вунгтау → Далат", "📍 Vung Tau → Ho Chi Minh City": "📍 Вунгтау → Хошимин", "📍 Vung Tau → Mui Ne": "📍 Вунгтау → Муйне", "📍 Vung Tau → Nha Trang": "📍 Вунгтау → Нячанг", "📍 Vung Tau → Cam Ranh": "📍 Вунгтау → Камрань", "Đặt xe ngay": "Мгновенное бронирование", "Xem giá & đặt xe ngay": "Узнать цену и забронировать", "Phản hồi nhanh qua Zalo hoặc WhatsApp • Không phát sinh phí": "Быстрый ответ в WhatsApp • Без скрытых платежей", "Số khách": "Пассажиры", "1 - 3 người": "1 - 3 человека", "4 - 6 người": "4 - 6 человек", "7 - 10 người": "7 - 10 человек", "Trên 10 người": "10+ человек", "Chọn tuyến *": "Выберите маршрут *", "Loại xe *": "Тип автомобиля *", "4 chỗ": "4 места", "7 chỗ": "7 мест", "Limousine 9 chỗ VIP": "Лимузин 9 мест", "16 chỗ": "16 мест", "Giá dự kiến": "Ориентировочная цена", "Chọn tuyến và loại xe": "Выберите маршрут и тип автомобиля", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "Окончательное подтверждение в WhatsApp", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 Забронировать через WhatsApp", "✔ Phản hồi nhanh": "✔ Быстрый ответ", "✔ Không cần cọc": "✔ Без предоплаты", "✔ Xe riêng": "✔ Только индивидуально", "Khách hàng nói gì": "Отзывы путешественников", "Phản hồi thực tế": "Реальные отзывы клиентов", "“Xe sạch, tài xế đúng giờ, đặt xe nhanh qua Zalo rất tiện.”": "“Очень хороший сервис, водитель приехал вовремя, а машина была чистой. Бронировать через WhatsApp очень легко.”", "“Đi gia đình rất thoải mái, không phải chờ ghép khách, hỗ trợ nhanh.”": "“Лучшая цена в Муйне и очень комфортная поездка. Очень рекомендую иностранным путешественникам.”", "“Liên hệ dễ, tài xế chạy cẩn thận, lần sau mình sẽ đặt tiếp.”": "“Быстрый ответ, профессиональный водитель и безопасный трансфер. В следующий раз снова закажу.”", "Vì sao nên chọn xe của chúng tôi": "Почему выбирают нас", "✔ Xe riêng đi tỉnh uy tín tại Mũi Né": "✔ Надежный частный трансфер в Муйне", "✔ Hỗ trợ nhanh qua Zalo, WhatsApp và điện thoại": "✔ Поддержка на английском через WhatsApp", "✔ Đón tận nơi – trả tận nơi": "✔ Подача и высадка от двери до двери", "✔ Chủ động giờ đi": "✔ Гибкое время выезда", "✔ Giá trọn gói, không phát sinh": "✔ Фиксированная цена без скрытых платежей", "✔ Thanh toán linh hoạt": "✔ Оплата после поездки", "Cách đặt xe": "Как это работает", "Chọn tuyến đường": "Выберите маршрут", "Chọn số khách và loại xe": "Выберите пассажиров и тип автомобиля", "Xem giá dự kiến": "Узнайте ориентировочную цену", "Gửi thông tin qua Zalo hoặc WhatsApp": "Отправьте бронирование через WhatsApp", "Nhận xác nhận nhanh từ bên xe": "Получите быстрое подтверждение от нашей команды", "Vị trí của chúng tôi": "Мы на карте", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "Удобная точка подачи в Муйне", "Đón khách & Liên hệ": "Подача и контакт", "Bạn có thể xem vị trí trên Google Maps để tiện liên hệ, hẹn điểm đón và xác nhận chuyến đi nhanh hơn.": "Вы легко найдете нас на Google Maps для удобной подачи, быстрого контакта и легкого подтверждения бронирования перед поездкой.", "📍 Điểm đón tại Mũi Né (xác nhận qua Zalo/WhatsApp)": "📍 Муйне, Фантьет, Биньтхуан", "✔ Dễ tìm": "✔ Легко найти", "✔ Hỗ trợ Zalo nhanh": "✔ Быстрая поддержка в WhatsApp", "✔ Hẹn điểm đón linh hoạt": "✔ Удобная координация подачи", "Mở Google Maps": "Открыть Google Maps", "Hỏi điểm đón qua Zalo": "Спросить о подаче в WhatsApp", "": ""}
+      vi: {"English": "Tiếng Việt", "🚕 Mui Ne Private Car Service": "🚕 Dịch vụ xe riêng Mũi Né", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "An toàn • Riêng tư • Hỗ trợ tiếng Anh • Giá cố định", "📞 Gọi ngay": "📞 Gọi", "💬 Zalo": "💬 Zalo", "⭐ Dịch vụ xe riêng cao cấp được nhiều khách chọn": "⭐ Được nhiều du khách tại Mũi Né tin chọn", "Xe riêng VIP Mũi Né đi tỉnh – Đón tận nơi": "Dịch vụ xe riêng cao cấp tại Mũi Né", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "Đặt xe riêng thoải mái đi TP.HCM, Đà Lạt, Nha Trang, Cam Ranh, Cần Thơ và nhiều nơi khác.\n            Phản hồi nhanh qua WhatsApp, xe sạch, tài xế chuyên nghiệp và không cần cọc.", "Khách hài lòng": "Khách hài lòng", "Hỗ trợ Zalo": "Hỗ trợ Zalo", "Chuyến riêng": "Chuyến riêng", "Không cần cọc": "Không cọc", "🚀 Xem giá VIP & đặt xe": "🚀 Xem giá & Booking VIP", "💬 Nhắn Zalo ngay": "💬 Nhắn Zalo ngay", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "Ưu đãi hôm nay • Giờ đi linh hoạt • Đưa đón tận nơi", "✨ Chốt xe nhanh": "✅ Đặt xe dễ dàng", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "Chọn tuyến, xem giá và xác nhận trên WhatsApp chỉ trong vài phút.", "👑 Xe riêng cao cấp": "🚘 Xe thoải mái", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "Có xe 4 chỗ, 7 chỗ, limousine và van cho mọi nhóm khách.", "🛡 Giá rõ ràng": "💵 Giá rõ ràng", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "Giá cố định, không phí ẩn, thanh toán sau chuyến đi.", "Dịch vụ nổi bật tại Mũi Né": "Trải nghiệm nổi bật ở Mũi Né", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "Đặt riêng • Xác nhận nhanh • Hỗ trợ tiếng Anh", "🏝 Jeep Tour": "🏝 Tour Jeep", "Dịch vụ riêng tại Mũi Né": "Trải nghiệm riêng tại Mũi Né", "Most Booked": "Đặt nhiều nhất", "✔ White Sand Dunes": "✔ Đồi cát trắng", "✔ Red Sand Dunes": "✔ Đồi cát đỏ", "✔ Fairy Stream": "✔ Suối Tiên", "✔ Fishing Village": "✔ Làng chài", "Check Availability": "Kiểm tra chỗ trống", "🏔 Ta Cu Mountain": "🏔 Núi Tà Cú", "Chuyến đi riêng": "Chuyến đi riêng", "Recommended": "Đề xuất", "✔ Reclining Buddha": "✔ Tượng Phật nằm", "✔ Cable Car": "✔ Cáp treo", "✔ Mountain View": "✔ View núi đẹp", "🎣 Fishing Experience": "🎣 Trải nghiệm câu cá", "Thư giãn và trải nghiệm riêng": "Thư giãn và tự tay câu cá", "Unique": "Độc đáo", "✔ Freshwater fishing": "✔ Câu cá nước ngọt", "✔ Equipment included": "✔ Có sẵn dụng cụ", "✔ Relaxing nature": "✔ Không gian thiên nhiên", "✔ Catch & cook": "✔ Câu xong có thể nấu", "Tuyến đường phổ biến": "Các tuyến phổ biến", "Bấm chọn tuyến để xem giá nhanh": "Bấm chọn tuyến để điền form đặt xe", "Liên hệ Zalo nhanh": "Đặt nhanh qua WhatsApp", "📍 Ho Chi Minh City → Mui Ne": "📍 TP.HCM → Mũi Né", "📍 Ho Chi Minh City → Nha Trang": "📍 TP.HCM → Nha Trang", "📍 Ho Chi Minh City → Da Lat": "📍 TP.HCM → Đà Lạt", "📍 Ho Chi Minh City → Cam Ranh": "📍 TP.HCM → Cam Ranh", "📍 Ho Chi Minh City → Vung Tau": "📍 TP.HCM → Vũng Tàu", "📍 Ho Chi Minh City → Can Tho": "📍 TP.HCM → Cần Thơ", "📍 Can Tho → Ho Chi Minh City": "📍 Cần Thơ → TP.HCM", "📍 Mui Ne → Da Lat": "📍 Mũi Né → Đà Lạt", "📍 Mui Ne → Nha Trang": "📍 Mũi Né → Nha Trang", "📍 Mui Ne → Cam Ranh": "📍 Mũi Né → Cam Ranh", "📍 Mui Ne → Ho Chi Minh City": "📍 Mũi Né → TP.HCM", "📍 Mui Ne → Vung Tau": "📍 Mũi Né → Vũng Tàu", "📍 Da Lat → Mui Ne": "📍 Đà Lạt → Mũi Né", "📍 Da Lat → Nha Trang": "📍 Đà Lạt → Nha Trang", "📍 Da Lat → Ho Chi Minh City": "📍 Đà Lạt → TP.HCM", "📍 Da Lat → Vung Tau": "📍 Đà Lạt → Vũng Tàu", "📍 Nha Trang → Mui Ne": "📍 Nha Trang → Mũi Né", "📍 Nha Trang → Da Lat": "📍 Nha Trang → Đà Lạt", "📍 Nha Trang → Ho Chi Minh City": "📍 Nha Trang → TP.HCM", "📍 Nha Trang → Vung Tau": "📍 Nha Trang → Vũng Tàu", "📍 Cam Ranh → Mui Ne": "📍 Cam Ranh → Mũi Né", "📍 Cam Ranh → Da Lat": "📍 Cam Ranh → Đà Lạt", "📍 Cam Ranh → Ho Chi Minh City": "📍 Cam Ranh → TP.HCM", "📍 Cam Ranh → Vung Tau": "📍 Cam Ranh → Vũng Tàu", "📍 Vung Tau → Da Lat": "📍 Vũng Tàu → Đà Lạt", "📍 Vung Tau → Ho Chi Minh City": "📍 Vũng Tàu → TP.HCM", "📍 Vung Tau → Mui Ne": "📍 Vũng Tàu → Mũi Né", "📍 Vung Tau → Nha Trang": "📍 Vũng Tàu → Nha Trang", "📍 Vung Tau → Cam Ranh": "📍 Vũng Tàu → Cam Ranh", "Booking VIP": "Booking VIP", "Xem giá VIP & giữ xe ngay": "Xem giá & Giữ chỗ", "Xác nhận nhanh qua Zalo hoặc WhatsApp • Giá rõ ràng • Không ghép khách": "Phản hồi nhanh qua Zalo hoặc WhatsApp • Không phí ẩn", "Số khách": "Số khách", "1 - 3 người": "1 - 3 người", "4 - 6 người": "4 - 6 người", "7 - 10 người": "7 - 10 người", "Trên 10 người": "Trên 10 người", "Chọn tuyến *": "Chọn tuyến *", "Loại xe *": "Loại xe *", "4 chỗ": "4 chỗ", "7 chỗ": "7 chỗ", "Limousine 9 chỗ VIP": "Limousine 9 chỗ", "16 chỗ": "16 chỗ", "Giá dự kiến": "Giá dự kiến", "Chọn tuyến và loại xe": "Chọn tuyến và loại xe", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 Đặt qua WhatsApp", "✔ Phản hồi nhanh": "✔ Phản hồi nhanh", "✔ Xe riêng": "✔ Chuyến riêng", "Khách hàng nói gì": "Khách nói gì về chúng tôi", "Phản hồi thực tế": "Đánh giá thực tế từ khách hàng", "“Xe sạch, tài xế đúng giờ, đặt xe nhanh qua Zalo rất tiện.”": "“Dịch vụ rất tốt, tài xế đúng giờ và xe rất sạch. Đặt qua WhatsApp rất dễ.”", "“Đi gia đình rất thoải mái, không phải chờ ghép khách, hỗ trợ nhanh.”": "“Giá tốt nhất ở Mũi Né và chuyến đi rất êm. Rất đáng giới thiệu cho du khách nước ngoài.”", "“Liên hệ dễ, tài xế chạy cẩn thận, lần sau mình sẽ đặt tiếp.”": "“Phản hồi nhanh, tài xế chuyên nghiệp và đi an toàn. Lần sau tôi sẽ đặt lại.”", "Vì sao nên chọn xe của chúng tôi": "Vì sao chọn chúng tôi", "✔ Xe riêng đi tỉnh uy tín tại Mũi Né": "✔ Dịch vụ xe riêng uy tín tại Mũi Né", "✔ Hỗ trợ nhanh qua Zalo, WhatsApp và điện thoại": "✔ Hỗ trợ nhanh qua Zalo, WhatsApp và điện thoại", "✔ Đón tận nơi – trả tận nơi": "✔ Đón và trả tận nơi", "✔ Chủ động giờ đi": "✔ Giờ đi linh hoạt", "✔ Giá trọn gói, không phát sinh": "✔ Giá cố định không phí ẩn", "✔ Thanh toán linh hoạt": "✔ Thanh toán sau chuyến đi", "Cách đặt xe": "Cách đặt xe", "Chọn tuyến đường": "Chọn tuyến đường", "Chọn số khách và loại xe": "Chọn số khách và loại xe", "Xem giá dự kiến": "Xem giá dự kiến", "Gửi thông tin qua Zalo hoặc WhatsApp": "Gửi đặt xe qua WhatsApp", "Nhận xác nhận nhanh từ bên xe": "Nhận xác nhận nhanh từ chúng tôi", "Vị trí của chúng tôi": "Tìm chúng tôi trên bản đồ", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "Điểm đón thuận tiện tại Mũi Né", "Đón khách & Liên hệ": "Đón khách & Liên hệ", "Bạn có thể xem vị trí trên Google Maps để tiện liên hệ, hẹn điểm đón và xác nhận chuyến đi nhanh hơn.": "Bạn có thể dễ dàng tìm vị trí của chúng tôi trên Google Maps để hỗ trợ đón khách, liên hệ nhanh và xác nhận đặt xe thuận tiện trước chuyến đi.", "📍 Điểm đón tại Mũi Né (xác nhận qua Zalo/WhatsApp)": "📍 MUI NE PRIVATE CAR, Mũi Né, Phan Thiết, Bình Thuận", "✔ Dễ tìm": "✔ Dễ tìm", "✔ Hỗ trợ Zalo nhanh": "✔ Hỗ trợ WhatsApp nhanh", "✔ Hẹn điểm đón linh hoạt": "✔ Phối hợp điểm đón thuận tiện", "Mở Google Maps": "Mở Google Maps", "Hỏi điểm đón qua Zalo": "Hỏi điểm đón qua Zalo", "": ""},
+      ru: {"🚕 Mui Ne Private Car Service": "🚕 Частный трансфер Муйне", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "Безопасно • Индивидуально • Поддержка на английском • Фиксированная цена", "📞 Gọi ngay": "📞 Позвонить", "💬 Zalo": "💬 Zalo", "⭐ Dịch vụ xe riêng cao cấp được nhiều khách chọn": "⭐ Нам доверяют иностранные путешественники в Муйне", "Xe riêng VIP Mũi Né đi tỉnh – Đón tận nơi": "Премиальный сервис частного трансфера в Муйне", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "Закажите комфортный частный трансфер в Хошимин, Далат, Нячанг, Камрань, Кантхо и другие направления.\n            Быстрый ответ в WhatsApp, чистые машины, профессиональные водители и без предоплаты.", "Khách hài lòng": "Довольных клиентов", "Hỗ trợ Zalo": "Поддержка в WhatsApp", "Chuyến riêng": "Индивидуальный трансфер", "Không cần cọc": "Без предоплаты", "🚀 Xem giá VIP & đặt xe": "🚀 Узнать цену и забронировать", "💬 Nhắn Zalo ngay": "💬 Написать в WhatsApp", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "Специальная скидка сегодня • Гибкое время выезда • От двери до двери", "✨ Chốt xe nhanh": "✅ Легкое бронирование", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "Выберите маршрут, узнайте цену и подтвердите в WhatsApp за пару минут.", "👑 Xe riêng cao cấp": "🚘 Комфортные автомобили", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "Авто на 4 и 7 мест, лимузин и микроавтобус для любой группы.", "🛡 Giá rõ ràng": "💵 Прозрачные цены", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "Фиксированная цена, без скрытых платежей, оплата после поездки.", "Dịch vụ nổi bật tại Mũi Né": "Лучшие впечатления в Муйне", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "Индивидуальное бронирование • Быстрое подтверждение • Поддержка на английском", "🏝 Jeep Tour": "🏝 Джип-тур", "Dịch vụ riêng tại Mũi Né": "Индивидуальная экскурсия в Муйне", "Most Booked": "Самое популярное", "✔ White Sand Dunes": "✔ Белые дюны", "✔ Red Sand Dunes": "✔ Красные дюны", "✔ Fairy Stream": "✔ Ручей Фей", "✔ Fishing Village": "✔ Рыбацкая деревня", "Check Availability": "Проверить доступность", "🏔 Ta Cu Mountain": "🏔 Гора Та Ку", "Chuyến đi riêng": "Индивидуальная поездка", "Recommended": "Рекомендуем", "✔ Reclining Buddha": "✔ Лежащий Будда", "✔ Cable Car": "✔ Канатная дорога", "✔ Mountain View": "✔ Горный вид", "✔ Chuyến riêng": "✔ Индивидуальный трансфер", "🎣 Fishing Experience": "🎣 Рыбалка", "Thư giãn và trải nghiệm riêng": "Отдых и рыбалка своими руками", "Unique": "Уникально", "✔ Freshwater fishing": "✔ Пресноводная рыбалка", "✔ Equipment included": "✔ Снаряжение включено", "✔ Relaxing nature": "✔ Спокойная природа", "✔ Catch & cook": "✔ Поймал и приготовил", "Tuyến đường phổ biến": "Популярные маршруты", "Bấm chọn tuyến để xem giá nhanh": "Нажмите маршрут, чтобы заполнить форму бронирования", "Liên hệ Zalo nhanh": "Быстрое бронирование через WhatsApp", "📍 Ho Chi Minh City → Mui Ne": "📍 Хошимин → Муйне", "📍 Ho Chi Minh City → Nha Trang": "📍 Хошимин → Нячанг", "📍 Ho Chi Minh City → Da Lat": "📍 Хошимин → Далат", "📍 Ho Chi Minh City → Cam Ranh": "📍 Хошимин → Камрань", "📍 Ho Chi Minh City → Vung Tau": "📍 Хошимин → Вунгтау", "📍 Ho Chi Minh City → Can Tho": "📍 Хошимин → Кантхо", "📍 Can Tho → Ho Chi Minh City": "📍 Кантхо → Хошимин", "📍 Mui Ne → Da Lat": "📍 Муйне → Далат", "📍 Mui Ne → Nha Trang": "📍 Муйне → Нячанг", "📍 Mui Ne → Cam Ranh": "📍 Муйне → Камрань", "📍 Mui Ne → Ho Chi Minh City": "📍 Муйне → Хошимин", "📍 Mui Ne → Vung Tau": "📍 Муйне → Вунгтау", "📍 Da Lat → Mui Ne": "📍 Далат → Муйне", "📍 Da Lat → Nha Trang": "📍 Далат → Нячанг", "📍 Da Lat → Ho Chi Minh City": "📍 Далат → Хошимин", "📍 Da Lat → Vung Tau": "📍 Далат → Вунгтау", "📍 Nha Trang → Mui Ne": "📍 Нячанг → Муйне", "📍 Nha Trang → Da Lat": "📍 Нячанг → Далат", "📍 Nha Trang → Ho Chi Minh City": "📍 Нячанг → Хошимин", "📍 Nha Trang → Vung Tau": "📍 Нячанг → Вунгтау", "📍 Cam Ranh → Mui Ne": "📍 Камрань → Муйне", "📍 Cam Ranh → Da Lat": "📍 Камрань → Далат", "📍 Cam Ranh → Ho Chi Minh City": "📍 Камрань → Хошимин", "📍 Cam Ranh → Vung Tau": "📍 Камрань → Вунгтау", "📍 Vung Tau → Da Lat": "📍 Вунгтау → Далат", "📍 Vung Tau → Ho Chi Minh City": "📍 Вунгтау → Хошимин", "📍 Vung Tau → Mui Ne": "📍 Вунгтау → Муйне", "📍 Vung Tau → Nha Trang": "📍 Вунгтау → Нячанг", "📍 Vung Tau → Cam Ranh": "📍 Вунгтау → Камрань", "Booking VIP": "Мгновенное бронирование", "Xem giá VIP & giữ xe ngay": "Узнать цену и забронировать", "Xác nhận nhanh qua Zalo hoặc WhatsApp • Giá rõ ràng • Không ghép khách": "Быстрый ответ в WhatsApp • Без скрытых платежей", "Số khách": "Пассажиры", "1 - 3 người": "1 - 3 человека", "4 - 6 người": "4 - 6 человек", "7 - 10 người": "7 - 10 человек", "Trên 10 người": "10+ человек", "Chọn tuyến *": "Выберите маршрут *", "Loại xe *": "Тип автомобиля *", "4 chỗ": "4 места", "7 chỗ": "7 мест", "Limousine 9 chỗ VIP": "Лимузин 9 мест", "16 chỗ": "16 мест", "Giá dự kiến": "Ориентировочная цена", "Chọn tuyến và loại xe": "Выберите маршрут и тип автомобиля", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "Окончательное подтверждение в WhatsApp", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 Забронировать через WhatsApp", "✔ Phản hồi nhanh": "✔ Быстрый ответ", "✔ Không cần cọc": "✔ Без предоплаты", "✔ Xe riêng": "✔ Только индивидуально", "Khách hàng nói gì": "Отзывы путешественников", "Phản hồi thực tế": "Реальные отзывы клиентов", "“Xe sạch, tài xế đúng giờ, đặt xe nhanh qua Zalo rất tiện.”": "“Очень хороший сервис, водитель приехал вовремя, а машина была чистой. Бронировать через WhatsApp очень легко.”", "“Đi gia đình rất thoải mái, không phải chờ ghép khách, hỗ trợ nhanh.”": "“Лучшая цена в Муйне и очень комфортная поездка. Очень рекомендую иностранным путешественникам.”", "“Liên hệ dễ, tài xế chạy cẩn thận, lần sau mình sẽ đặt tiếp.”": "“Быстрый ответ, профессиональный водитель и безопасный трансфер. В следующий раз снова закажу.”", "Vì sao nên chọn xe của chúng tôi": "Почему выбирают нас", "✔ Xe riêng đi tỉnh uy tín tại Mũi Né": "✔ Надежный частный трансфер в Муйне", "✔ Hỗ trợ nhanh qua Zalo, WhatsApp và điện thoại": "✔ Поддержка на английском через WhatsApp", "✔ Đón tận nơi – trả tận nơi": "✔ Подача и высадка от двери до двери", "✔ Chủ động giờ đi": "✔ Гибкое время выезда", "✔ Giá trọn gói, không phát sinh": "✔ Фиксированная цена без скрытых платежей", "✔ Thanh toán linh hoạt": "✔ Оплата после поездки", "Cách đặt xe": "Как это работает", "Chọn tuyến đường": "Выберите маршрут", "Chọn số khách và loại xe": "Выберите пассажиров и тип автомобиля", "Xem giá dự kiến": "Узнайте ориентировочную цену", "Gửi thông tin qua Zalo hoặc WhatsApp": "Отправьте бронирование через WhatsApp", "Nhận xác nhận nhanh từ bên xe": "Получите быстрое подтверждение от нашей команды", "Vị trí của chúng tôi": "Мы на карте", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "Удобная точка подачи в Муйне", "Đón khách & Liên hệ": "Подача и контакт", "Bạn có thể xem vị trí trên Google Maps để tiện liên hệ, hẹn điểm đón và xác nhận chuyến đi nhanh hơn.": "Вы легко найдете нас на Google Maps для удобной подачи, быстрого контакта и легкого подтверждения бронирования перед поездкой.", "📍 Điểm đón tại Mũi Né (xác nhận qua Zalo/WhatsApp)": "📍 Муйне, Фантьет, Биньтхуан", "✔ Dễ tìm": "✔ Легко найти", "✔ Hỗ trợ Zalo nhanh": "✔ Быстрая поддержка в WhatsApp", "✔ Hẹn điểm đón linh hoạt": "✔ Удобная координация подачи", "Mở Google Maps": "Открыть Google Maps", "Hỏi điểm đón qua Zalo": "Спросить о подаче в WhatsApp", "": ""}
 ,
-      ko: {"English": "한국어", "🚕 Mui Ne Private Car Service": "🚕 무이네 프라이빗 차량 서비스", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "안전 • 프라이빗 • 영어 지원 • 고정 요금", "📞 Gọi ngay": "📞 전화", "💬 Zalo": "💬 Zalo", "⭐ Dịch vụ xe riêng được nhiều khách tin chọn": "⭐ 무이네 외국인 여행객이 신뢰하는 서비스", "Xe riêng Mũi Né đi tỉnh – Đón tận nơi": "무이네 프리미엄 프라이빗 차량 서비스", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "호치민시, 달랏, 나트랑, 깜란, 껀터 등으로 편안한 프라이빗 차량을 예약하세요.\n            WhatsApp 빠른 답변, 깨끗한 차량, 전문 기사, 선결제 불필요.", "Khách hài lòng": "만족한 여행객", "Hỗ trợ Zalo": "WhatsApp 지원", "Chuyến riêng": "프라이빗 이동", "Không cần cọc": "선결제 없음", "🚀 Xem giá & đặt xe": "🚀 요금 확인 및 예약", "💬 Nhắn Zalo ngay": "💬 Zalo 채팅", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "오늘 특별 할인 • 유연한 출발 시간 • 문앞 픽업/드롭", "✅ Đặt xe nhanh": "✅ 쉬운 예약", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "노선을 선택하고 요금을 확인한 뒤 몇 분 안에 WhatsApp으로 확정하세요.", "🚘 Xe riêng sạch sẽ": "🚘 편안한 차량", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "4인승, 7인승, 리무진, 밴 등 다양한 차량 제공.", "💵 Giá trọn gói": "💵 명확한 가격", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "고정 요금, 숨은 비용 없음, 여행 후 결제.", "Dịch vụ nổi bật tại Mũi Né": "무이네 인기 체험", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "프라이빗 예약 • 빠른 확정 • 영어 지원", "🏝 Jeep Tour": "🏝 지프 투어", "Dịch vụ riêng tại Mũi Né": "무이네 프라이빗 체험", "Most Booked": "가장 인기", "✔ White Sand Dunes": "✔ 화이트 샌드 듄", "✔ Red Sand Dunes": "✔ 레드 샌드 듄", "✔ Fairy Stream": "✔ 요정의 샘", "✔ Fishing Village": "✔ 어촌 마을", "Check Availability": "가능 여부 확인", "🏔 Ta Cu Mountain": "🏔 타꾸 산", "Chuyến đi riêng": "프라이빗 투어", "Recommended": "추천", "✔ Reclining Buddha": "✔ 와불상", "✔ Cable Car": "✔ 케이블카", "✔ Mountain View": "✔ 산 전망", "✔ Chuyến riêng": "✔ 프라이빗 이동", "🎣 Fishing Experience": "🎣 낚시 체험", "Thư giãn và trải nghiệm riêng": "휴식과 직접 낚시", "Unique": "특별함", "✔ Freshwater fishing": "✔ 민물 낚시", "✔ Equipment included": "✔ 장비 포함", "✔ Relaxing nature": "✔ 여유로운 자연", "✔ Catch & cook": "✔ 잡아서 요리", "Tuyến đường phổ biến": "인기 노선", "Bấm chọn tuyến để xem giá nhanh": "노선을 눌러 예약 폼 작성", "Liên hệ Zalo nhanh": "WhatsApp 빠른 예약", "Đặt xe ngay": "즉시 예약", "Xem giá & đặt xe ngay": "요금 확인 및 예약", "Phản hồi nhanh qua Zalo hoặc WhatsApp • Không phát sinh phí": "WhatsApp 빠른 답변 • 숨은 비용 없음", "Số khách": "인원", "1 - 3 người": "1 - 3명", "4 - 6 người": "4 - 6명", "7 - 10 người": "7 - 10명", "Trên 10 người": "10명 이상", "Chọn tuyến *": "노선 선택 *", "Loại xe *": "차종 선택 *", "4 chỗ": "4인승", "7 chỗ": "7인승", "Limousine 9 chỗ VIP": "9인승 리무진", "16 chỗ": "16인승", "Giá dự kiến": "예상 요금", "Chọn tuyến và loại xe": "노선과 차량 선택", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "최종 확인은 WhatsApp에서", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 WhatsApp으로 예약", "✔ Phản hồi nhanh": "✔ 빠른 답변", "✔ Không cần cọc": "✔ 선결제 없음", "✔ Xe riêng": "✔ 프라이빗 전용", "Khách hàng nói gì": "여행객 후기", "Phản hồi thực tế": "실제 고객 후기", "“Xe sạch, tài xế đúng giờ, đặt xe nhanh qua Zalo rất tiện.”": "“서비스가 아주 좋았고 기사님도 정시에 왔으며 차량도 깨끗했습니다. WhatsApp 예약도 쉬웠어요.”", "“Đi gia đình rất thoải mái, không phải chờ ghép khách, hỗ trợ nhanh.”": "“무이네에서 가장 좋은 가격이었고 이동도 매우 편했습니다. 외국인 여행객에게 강력 추천합니다.”", "“Liên hệ dễ, tài xế chạy cẩn thận, lần sau mình sẽ đặt tiếp.”": "“응답이 빠르고 기사님도 전문적이며 이동이 안전했습니다. 다음에도 다시 예약할게요.”", "Vì sao nên chọn xe của chúng tôi": "왜 우리를 선택할까요", "✔ Xe riêng đi tỉnh uy tín tại Mũi Né": "✔ 무이네 믿을 수 있는 프라이빗 차량 서비스", "✔ Hỗ trợ nhanh qua Zalo, WhatsApp và điện thoại": "✔ WhatsApp 영어 지원", "✔ Đón tận nơi – trả tận nơi": "✔ 문앞 픽업 및 드롭", "✔ Chủ động giờ đi": "✔ 유연한 출발 시간", "✔ Giá trọn gói, không phát sinh": "✔ 숨은 비용 없는 고정 요금", "✔ Thanh toán linh hoạt": "✔ 여행 후 결제", "Cách đặt xe": "이용 방법", "Chọn tuyến đường": "노선 선택", "Chọn số khách và loại xe": "인원과 차종 선택", "Xem giá dự kiến": "예상 요금 확인", "Gửi thông tin qua Zalo hoặc WhatsApp": "WhatsApp으로 예약 보내기", "Nhận xác nhận nhanh từ bên xe": "팀의 빠른 확정 받기", "Vị trí của chúng tôi": "지도에서 찾기", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "무이네 편리한 픽업 지점", "Đón khách & Liên hệ": "픽업 및 연락", "Bạn có thể xem vị trí trên Google Maps để tiện liên hệ, hẹn điểm đón và xác nhận chuyến đi nhanh hơn.": "Google Maps에서 위치를 쉽게 확인해 픽업 지원, 빠른 연락, 여행 전 간편한 예약 확인이 가능합니다.", "📍 Điểm đón tại Mũi Né (xác nhận qua Zalo/WhatsApp)": "📍 무이네, 판티엣, 빈투언", "✔ Dễ tìm": "✔ 쉽게 찾을 수 있음", "✔ Hỗ trợ Zalo nhanh": "✔ WhatsApp 빠른 지원", "✔ Hẹn điểm đón linh hoạt": "✔ 편리한 픽업 조율", "Mở Google Maps": "Google 지도 열기", "Hỏi điểm đón qua Zalo": "WhatsApp으로 픽업 문의", "": "✈️ 텔레그램", "📍 Ho Chi Minh City → Mui Ne": "📍 호치민시 → 무이네", "📍 Ho Chi Minh City → Nha Trang": "📍 호치민시 → 나트랑", "📍 Ho Chi Minh City → Da Lat": "📍 호치민시 → 달랏", "📍 Ho Chi Minh City → Cam Ranh": "📍 호치민시 → 깜란", "📍 Ho Chi Minh City → Vung Tau": "📍 호치민시 → 붕따우", "📍 Ho Chi Minh City → Can Tho": "📍 호치민시 → 껀터", "📍 Can Tho → Ho Chi Minh City": "📍 껀터 → 호치민시", "📍 Mui Ne → Da Lat": "📍 무이네 → 달랏", "📍 Mui Ne → Nha Trang": "📍 무이네 → 나트랑", "📍 Mui Ne → Cam Ranh": "📍 무이네 → 깜란", "📍 Mui Ne → Ho Chi Minh City": "📍 무이네 → 호치민시", "📍 Mui Ne → Vung Tau": "📍 무이네 → 붕따우", "📍 Da Lat → Mui Ne": "📍 달랏 → 무이네", "📍 Da Lat → Nha Trang": "📍 달랏 → 나트랑", "📍 Da Lat → Ho Chi Minh City": "📍 달랏 → 호치민시", "📍 Da Lat → Vung Tau": "📍 달랏 → 붕따우", "📍 Nha Trang → Mui Ne": "📍 나트랑 → 무이네", "📍 Nha Trang → Da Lat": "📍 나트랑 → 달랏", "📍 Nha Trang → Ho Chi Minh City": "📍 나트랑 → 호치민시", "📍 Nha Trang → Vung Tau": "📍 나트랑 → 붕따우", "📍 Cam Ranh → Mui Ne": "📍 깜란 → 무이네", "📍 Cam Ranh → Da Lat": "📍 깜란 → 달랏", "📍 Cam Ranh → Ho Chi Minh City": "📍 깜란 → 호치민시", "📍 Cam Ranh → Vung Tau": "📍 깜란 → 붕따우", "📍 Vung Tau → Da Lat": "📍 붕따우 → 달랏", "📍 Vung Tau → Ho Chi Minh City": "📍 붕따우 → 호치민시", "📍 Vung Tau → Mui Ne": "📍 붕따우 → 무이네", "📍 Vung Tau → Nha Trang": "📍 붕따우 → 나트랑", "📍 Vung Tau → Cam Ranh": "📍 붕따우 → 깜란"},
-      zh: {"English": "中文", "🚕 Mui Ne Private Car Service": "🚕 美奈包车服务", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "安全 • 私人接送 • 英文支持 • 固定价格", "📞 Gọi ngay": "📞 电话", "💬 Zalo": "💬 Zalo", "⭐ Dịch vụ xe riêng được nhiều khách tin chọn": "⭐ 深受美奈外国游客信赖", "Xe riêng Mũi Né đi tỉnh – Đón tận nơi": "美奈高级私人用车服务", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "预订舒适的私人接送服务，前往胡志明市、大叻、芽庄、金兰、芹苴等地。\n            WhatsApp 快速回复，车辆干净，司机专业，无需预付。", "Khách hài lòng": "满意旅客", "Hỗ trợ Zalo": "WhatsApp 支持", "Chuyến riêng": "私人接送", "Không cần cọc": "无需预付", "🚀 Xem giá & đặt xe": "🚀 查看价格并立即预订", "💬 Nhắn Zalo ngay": "💬 在 WhatsApp 聊天", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "今日特别优惠 • 出发时间灵活 • 上门接送", "✅ Đặt xe nhanh": "✅ 轻松预订", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "选择路线、查看价格，并在几分钟内通过 WhatsApp 确认。", "🚘 Xe riêng sạch sẽ": "🚘 舒适车辆", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "提供 4 座、7 座、豪华车和面包车，适合各种出行人数。", "💵 Giá trọn gói": "💵 价格透明", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "固定价格，无隐藏费用，行程结束后付款。", "Dịch vụ nổi bật tại Mũi Né": "美奈热门体验", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "私人预订 • 快速确认 • 英文支持", "🏝 Jeep Tour": "🏝 吉普车之旅", "Dịch vụ riêng tại Mũi Né": "美奈私人体验", "Most Booked": "最受欢迎", "✔ White Sand Dunes": "✔ 白沙丘", "✔ Red Sand Dunes": "✔ 红沙丘", "✔ Fairy Stream": "✔ 仙女溪", "✔ Fishing Village": "✔ 渔村", "Check Availability": "查看可订情况", "🏔 Ta Cu Mountain": "🏔 塔古山", "Chuyến đi riêng": "私人行程", "Recommended": "推荐", "✔ Reclining Buddha": "✔ 卧佛", "✔ Cable Car": "✔ 缆车", "✔ Mountain View": "✔ 山景", "✔ Chuyến riêng": "✔ 私人接送", "🎣 Fishing Experience": "🎣 钓鱼体验", "Thư giãn và trải nghiệm riêng": "放松并亲自钓鱼", "Unique": "独特", "✔ Freshwater fishing": "✔ 淡水钓鱼", "✔ Equipment included": "✔ 含设备", "✔ Relaxing nature": "✔ 轻松自然环境", "✔ Catch & cook": "✔ 现钓现做", "Tuyến đường phổ biến": "热门路线", "Bấm chọn tuyến để xem giá nhanh": "点击路线填写预订表单", "Liên hệ Zalo nhanh": "WhatsApp 快速预订", "Đặt xe ngay": "即时预订", "Xem giá & đặt xe ngay": "查看价格并预订", "Phản hồi nhanh qua Zalo hoặc WhatsApp • Không phát sinh phí": "WhatsApp 快速回复 • 无隐藏费用", "Số khách": "人数", "1 - 3 người": "1 - 3 人", "4 - 6 người": "4 - 6 人", "7 - 10 người": "7 - 10 人", "Trên 10 người": "10 人以上", "Chọn tuyến *": "选择路线 *", "Loại xe *": "车型 *", "4 chỗ": "4 座", "7 chỗ": "7 座", "Limousine 9 chỗ VIP": "9 座豪华车", "16 chỗ": "16 座", "Giá dự kiến": "预估价格", "Chọn tuyến và loại xe": "请选择路线和车型", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "最终确认通过 WhatsApp", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 通过 WhatsApp 预订", "✔ Phản hồi nhanh": "✔ 快速回复", "✔ Không cần cọc": "✔ 无需预付", "✔ Xe riêng": "✔ 仅限私人接送", "Khách hàng nói gì": "旅客评价", "Phản hồi thực tế": "真实客户反馈", "“Xe sạch, tài xế đúng giờ, đặt xe nhanh qua Zalo rất tiện.”": "“服务非常好，司机准时，车辆干净。通过 WhatsApp 预订很方便。”", "“Đi gia đình rất thoải mái, không phải chờ ghép khách, hỗ trợ nhanh.”": "“美奈最好的价格，行程也非常顺利。强烈推荐给外国游客。”", "“Liên hệ dễ, tài xế chạy cẩn thận, lần sau mình sẽ đặt tiếp.”": "“回复很快，司机专业，接送安全。下次还会再订。”", "Vì sao nên chọn xe của chúng tôi": "为什么选择我们", "✔ Xe riêng đi tỉnh uy tín tại Mũi Né": "✔ 美奈可靠的私人接送服务", "✔ Hỗ trợ nhanh qua Zalo, WhatsApp và điện thoại": "✔ WhatsApp 英文支持", "✔ Đón tận nơi – trả tận nơi": "✔ 上门接送", "✔ Chủ động giờ đi": "✔ 出发时间灵活", "✔ Giá trọn gói, không phát sinh": "✔ 固定价格，无隐藏费用", "✔ Thanh toán linh hoạt": "✔ 行程结束后付款", "Cách đặt xe": "如何预订", "Chọn tuyến đường": "选择路线", "Chọn số khách và loại xe": "选择人数和车型", "Xem giá dự kiến": "查看预估价格", "Gửi thông tin qua Zalo hoặc WhatsApp": "通过 WhatsApp 发送预订", "Nhận xác nhận nhanh từ bên xe": "获得我们团队的快速确认", "Vị trí của chúng tôi": "在地图上找到我们", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "美奈便捷上车点", "Đón khách & Liên hệ": "上车点与联系", "Bạn có thể xem vị trí trên Google Maps để tiện liên hệ, hẹn điểm đón và xác nhận chuyến đi nhanh hơn.": "您可以在 Google 地图上轻松找到我们的位置，方便接送支持、快速联系以及出发前确认预订。", "📍 Điểm đón tại Mũi Né (xác nhận qua Zalo/WhatsApp)": "📍 美奈，藩切，平顺", "✔ Dễ tìm": "✔ 容易找到", "✔ Hỗ trợ Zalo nhanh": "✔ WhatsApp 快速支持", "✔ Hẹn điểm đón linh hoạt": "✔ 方便协调上车点", "Mở Google Maps": "打开 Google 地图", "Hỏi điểm đón qua Zalo": "通过 WhatsApp 询问上车点", "": "", "📍 Ho Chi Minh City → Mui Ne": "📍 胡志明市 → 美奈", "📍 Ho Chi Minh City → Nha Trang": "📍 胡志明市 → 芽庄", "📍 Ho Chi Minh City → Da Lat": "📍 胡志明市 → 大叻", "📍 Ho Chi Minh City → Cam Ranh": "📍 胡志明市 → 金兰", "📍 Ho Chi Minh City → Vung Tau": "📍 胡志明市 → 头顿", "📍 Ho Chi Minh City → Can Tho": "📍 胡志明市 → 芹苴", "📍 Can Tho → Ho Chi Minh City": "📍 芹苴 → 胡志明市", "📍 Mui Ne → Da Lat": "📍 美奈 → 大叻", "📍 Mui Ne → Nha Trang": "📍 美奈 → 芽庄", "📍 Mui Ne → Cam Ranh": "📍 美奈 → 金兰", "📍 Mui Ne → Ho Chi Minh City": "📍 美奈 → 胡志明市", "📍 Mui Ne → Vung Tau": "📍 美奈 → 头顿", "📍 Da Lat → Mui Ne": "📍 大叻 → 美奈", "📍 Da Lat → Nha Trang": "📍 大叻 → 芽庄", "📍 Da Lat → Ho Chi Minh City": "📍 大叻 → 胡志明市", "📍 Da Lat → Vung Tau": "📍 大叻 → 头顿", "📍 Nha Trang → Mui Ne": "📍 芽庄 → 美奈", "📍 Nha Trang → Da Lat": "📍 芽庄 → 大叻", "📍 Nha Trang → Ho Chi Minh City": "📍 芽庄 → 胡志明市", "📍 Nha Trang → Vung Tau": "📍 芽庄 → 头顿", "📍 Cam Ranh → Mui Ne": "📍 金兰 → 美奈", "📍 Cam Ranh → Da Lat": "📍 金兰 → 大叻", "📍 Cam Ranh → Ho Chi Minh City": "📍 金兰 → 胡志明市", "📍 Cam Ranh → Vung Tau": "📍 金兰 → 头顿", "📍 Vung Tau → Da Lat": "📍 头顿 → 大叻", "📍 Vung Tau → Ho Chi Minh City": "📍 头顿 → 胡志明市", "📍 Vung Tau → Mui Ne": "📍 头顿 → 美奈", "📍 Vung Tau → Nha Trang": "📍 头顿 → 芽庄", "📍 Vung Tau → Cam Ranh": "📍 头顿 → 金兰"},
-      km: {"🚕 Mui Ne Private Car Service": "🚕 សេវារថយន្តឯកជន មួយណេ", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "សុវត្ថិភាព • ឯកជន • គាំទ្រភាសាអង់គ្លេស • តម្លៃថេរ", "📞 Gọi ngay": "📞 ទូរស័ព្ទ", "⭐ Dịch vụ xe riêng được nhiều khách tin chọn": "⭐ ទទួលការជឿទុកចិត្តពីភ្ញៀវបរទេសនៅមួយណេ", "Xe riêng Mũi Né đi tỉnh – Đón tận nơi": "សេវារថយន្តឯកជនគុណភាពខ្ពស់នៅមួយណេ", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "កក់សេវារថយន្តឯកជនសម្រាប់ធ្វើដំណើរយ៉ាងសុខស្រួលទៅកាន់ទីក្រុងហូជីមិញ ដាឡាត ញ៉ាត្រាង កាមរ៉ាញ កន្តូ និងកន្លែងផ្សេងៗ។\n            ឆ្លើយតបរហ័សតាម WhatsApp រថយន្តស្អាត អ្នកបើកបរជំនាញ និងមិនចាំបាច់កក់ប្រាក់មុន។", "Khách hài lòng": "ភ្ញៀវរីករាយ", "Hỗ trợ Zalo": "គាំទ្រ WhatsApp", "Chuyến riêng": "ដំណើរឯកជន", "Không cần cọc": "មិនចាំបាច់កក់ប្រាក់", "🚀 Xem giá & đặt xe": "🚀 ពិនិត្យតម្លៃ និងកក់ឥឡូវនេះ", "💬 Nhắn Zalo ngay": "💬 ជជែកតាម WhatsApp", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "បញ្ចុះតម្លៃពិសេសថ្ងៃនេះ • ម៉ោងចេញដំណើរបត់បែនបាន • សេវារហូតដល់មុខទ្វារ", "✅ Đặt xe nhanh": "✅ កក់ងាយស្រួល", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "ជ្រើសផ្លូវ ពិនិត្យតម្លៃ និងបញ្ជាក់តាម WhatsApp ក្នុងរយៈពេលប៉ុន្មាននាទី។", "🚘 Xe riêng sạch sẽ": "🚘 រថយន្តមានផាសុកភាព", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "ជម្រើសរថយន្ត 4 កៅអី 7 កៅអី លីមូស៊ីន និងឡានវ៉ាន់ សម្រាប់គ្រប់ក្រុមអ្នកដំណើរ។", "💵 Giá trọn gói": "💵 តម្លៃច្បាស់លាស់", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "តម្លៃថេរ មិនមានថ្លៃលាក់លៀម និងបង់ប្រាក់បន្ទាប់ពីដំណើរ។", "Dịch vụ nổi bật tại Mũi Né": "បទពិសោធន៍ពេញនិយមនៅមួយណេ", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "កក់ឯកជន • បញ្ជាក់រហ័ស • គាំទ្រភាសាអង់គ្លេស", "🏝 Jeep Tour": "🏝 ដំណើរកម្សាន្ត Jeep", "Dịch vụ riêng tại Mũi Né": "បទពិសោធន៍ឯកជននៅមួយណេ", "Most Booked": "កក់ច្រើនបំផុត", "✔ White Sand Dunes": "✔ ភ្នំខ្សាច់ស", "✔ Red Sand Dunes": "✔ ភ្នំខ្សាច់ក្រហម", "✔ Fairy Stream": "✔ ស្ទឹងទេពនិមិត្ត", "✔ Fishing Village": "✔ ភូមិនេសាទ", "Check Availability": "ពិនិត្យចំនួនទំនេរ", "🏔 Ta Cu Mountain": "🏔 ភ្នំតាគូ", "Chuyến đi riêng": "ដំណើរឯកជន", "Recommended": "ណែនាំ", "✔ Reclining Buddha": "✔ ព្រះពុទ្ធដេក", "✔ Cable Car": "✔ រថយន្តខ្សែកាប", "✔ Mountain View": "✔ ទេសភាពភ្នំ", "✔ Chuyến riêng": "✔ ដំណើរឯកជន", "🎣 Fishing Experience": "🎣 បទពិសោធន៍នេសាទ", "Thư giãn và trải nghiệm riêng": "សម្រាក និងនេសាទដោយខ្លួនឯង", "Unique": "ពិសេស", "✔ Freshwater fishing": "✔ នេសាទទឹកសាប", "✔ Equipment included": "✔ មានឧបករណ៍រួចរាល់", "✔ Relaxing nature": "✔ បរិយាកាសធម្មជាតិ", "✔ Catch & cook": "✔ នេសាទហើយចម្អិន", "Tuyến đường phổ biến": "ផ្លូវពេញនិយម", "Bấm chọn tuyến để xem giá nhanh": "ចុចជ្រើសផ្លូវដើម្បីបំពេញទម្រង់កក់", "Liên hệ Zalo nhanh": "កក់រហ័សតាម WhatsApp", "Đặt xe ngay": "កក់ភ្លាមៗ", "Xem giá & đặt xe ngay": "ពិនិត្យតម្លៃ និងកក់ទុក", "Phản hồi nhanh qua Zalo hoặc WhatsApp • Không phát sinh phí": "ឆ្លើយតបរហ័សតាម WhatsApp • មិនមានថ្លៃលាក់លៀម", "Số khách": "អ្នកដំណើរ", "1 - 3 người": "1 - 3 នាក់", "4 - 6 người": "4 - 6 នាក់", "7 - 10 người": "7 - 10 នាក់", "Trên 10 người": "លើសពី 10 នាក់", "Chọn tuyến *": "ជ្រើសផ្លូវ *", "Loại xe *": "ប្រភេទរថយន្ត *", "4 chỗ": "4 កៅអី", "7 chỗ": "7 កៅអី", "Limousine 9 chỗ VIP": "លីមូស៊ីន 9 កៅអី", "16 chỗ": "16 កៅអី", "Giá dự kiến": "តម្លៃប៉ាន់ស្មាន", "Chọn tuyến và loại xe": "ជ្រើសផ្លូវ និងរថយន្ត", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "បញ្ជាក់ចុងក្រោយតាម WhatsApp", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 កក់តាម WhatsApp", "✔ Phản hồi nhanh": "✔ ឆ្លើយតបរហ័ស", "✔ Không cần cọc": "✔ មិនចាំបាច់កក់ប្រាក់", "✔ Xe riêng": "✔ ឯកជនប៉ុណ្ណោះ", "Khách hàng nói gì": "អ្វីដែលភ្ញៀវនិយាយ", "Phản hồi thực tế": "មតិយោបល់ពិតពីអតិថិជន", "Vì sao nên chọn xe của chúng tôi": "ហេតុអ្វីជ្រើសរើសយើង", "Cách đặt xe": "របៀបដំណើរការ", "Chọn tuyến đường": "ជ្រើសផ្លូវរបស់អ្នក", "Chọn số khách và loại xe": "ជ្រើសចំនួនអ្នកដំណើរ និងប្រភេទរថយន្ត", "Xem giá dự kiến": "ពិនិត្យតម្លៃប៉ាន់ស្មាន", "Gửi thông tin qua Zalo hoặc WhatsApp": "ផ្ញើការកក់តាម WhatsApp", "Nhận xác nhận nhanh từ bên xe": "ទទួលការបញ្ជាក់រហ័សពីក្រុមយើង", "Vị trí của chúng tôi": "ស្វែងរកយើងលើផែនទី", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "ទីតាំងទទួលងាយស្រួលនៅមួយណេ", "Đón khách & Liên hệ": "ទទួល និងទំនាក់ទំនង", "Mở Google Maps": "បើក Google Maps", "Hỏi điểm đón qua Zalo": "សួរអំពីកន្លែងទទួលតាម WhatsApp", "": ""},
-      hi: {"🚕 Mui Ne Private Car Service": "🚕 मुई ने प्राइवेट कार सेवा", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "सुरक्षित • निजी • अंग्रेज़ी सहायता • तय कीमत", "📞 Gọi ngay": "📞 कॉल", "⭐ Dịch vụ xe riêng được nhiều khách tin chọn": "⭐ मुई ने में विदेशी यात्रियों का भरोसा", "Xe riêng Mũi Né đi tỉnh – Đón tận nơi": "मुई ने में प्रीमियम प्राइवेट कार सेवा", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "हो ची मिन्ह सिटी, दा लात, न्हा ट्रांग, कैम रन्ह, कैन थो और अन्य जगहों के लिए आरामदायक प्राइवेट ट्रांसफर बुक करें।\n            WhatsApp पर तेज़ जवाब, साफ गाड़ियाँ, पेशेवर ड्राइवर और कोई अग्रिम भुगतान नहीं।", "Khách hài lòng": "खुश यात्री", "Hỗ trợ Zalo": "WhatsApp सहायता", "Chuyến riêng": "निजी ट्रांसफर", "Không cần cọc": "बिना अग्रिम भुगतान", "🚀 Xem giá & đặt xe": "🚀 कीमत देखें और अभी बुक करें", "💬 Nhắn Zalo ngay": "💬 Zalo पर चैट करें", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "आज विशेष छूट • लचीला प्रस्थान समय • डोर-टू-डोर सेवा", "✅ Đặt xe nhanh": "✅ आसान बुकिंग", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "मार्ग चुनें, कीमत देखें और कुछ ही मिनटों में WhatsApp पर पुष्टि करें।", "🚘 Xe riêng sạch sẽ": "🚘 आरामदायक गाड़ियाँ", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "हर यात्रा समूह के लिए 4-सीटर, 7-सीटर, लिमोज़ीन और वैन विकल्प।", "💵 Giá trọn gói": "💵 साफ़ कीमत", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "फिक्स्ड रेट, कोई छिपा शुल्क नहीं, और यात्रा के बाद भुगतान।", "Dịch vụ nổi bật tại Mũi Né": "मुई ने के बेहतरीन अनुभव", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "निजी बुकिंग • तेज़ पुष्टि • अंग्रेज़ी सहायता", "🏝 Jeep Tour": "🏝 जीप टूर", "Dịch vụ riêng tại Mũi Né": "मुई ने में निजी अनुभव", "Most Booked": "सबसे ज़्यादा बुक किया गया", "✔ White Sand Dunes": "✔ सफेद रेत के टीले", "✔ Red Sand Dunes": "✔ लाल रेत के टीले", "✔ Fairy Stream": "✔ फेयरी स्ट्रीम", "✔ Fishing Village": "✔ मछुआरा गाँव", "Check Availability": "उपलब्धता देखें", "🏔 Ta Cu Mountain": "🏔 ता कू पर्वत", "Chuyến đi riêng": "निजी यात्रा", "Recommended": "सिफ़ारिश", "✔ Reclining Buddha": "✔ लेटा हुआ बुद्ध", "✔ Cable Car": "✔ केबल कार", "✔ Mountain View": "✔ पहाड़ी दृश्य", "✔ Chuyến riêng": "✔ निजी ट्रांसफर", "🎣 Fishing Experience": "🎣 मछली पकड़ने का अनुभव", "Thư giãn và trải nghiệm riêng": "आराम करें और खुद मछली पकड़ें", "Unique": "अनोखा", "✔ Freshwater fishing": "✔ मीठे पानी की मछली पकड़ना", "✔ Equipment included": "✔ उपकरण शामिल", "✔ Relaxing nature": "✔ सुकूनभरी प्रकृति", "✔ Catch & cook": "✔ पकड़ें और पकाएँ", "Tuyến đường phổ biến": "लोकप्रिय मार्ग", "Bấm chọn tuyến để xem giá nhanh": "बुकिंग फ़ॉर्म भरने के लिए मार्ग चुनें", "Liên hệ Zalo nhanh": "WhatsApp पर तेज़ बुकिंग", "Đặt xe ngay": "तुरंत बुकिंग", "Xem giá & đặt xe ngay": "कीमत देखें और रिज़र्व करें", "Phản hồi nhanh qua Zalo hoặc WhatsApp • Không phát sinh phí": "WhatsApp पर तेज़ जवाब • कोई छिपा शुल्क नहीं", "Số khách": "यात्री", "1 - 3 người": "1 - 3 लोग", "4 - 6 người": "4 - 6 लोग", "7 - 10 người": "7 - 10 लोग", "Trên 10 người": "10+ लोग", "Chọn tuyến *": "मार्ग चुनें *", "Loại xe *": "कार प्रकार *", "4 chỗ": "4 सीटें", "7 chỗ": "7 सीटें", "Limousine 9 chỗ VIP": "9 सीट लिमोज़ीन", "16 chỗ": "16 सीटें", "Giá dự kiến": "अनुमानित कीमत", "Chọn tuyến và loại xe": "मार्ग और कार चुनें", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "अंतिम पुष्टि WhatsApp पर", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 WhatsApp से बुक करें", "✔ Phản hồi nhanh": "✔ तेज़ जवाब", "✔ Không cần cọc": "✔ कोई अग्रिम नहीं", "✔ Xe riêng": "✔ केवल निजी", "Khách hàng nói gì": "यात्री क्या कहते हैं", "Phản hồi thực tế": "वास्तविक ग्राहक प्रतिक्रिया", "Vì sao nên chọn xe của chúng tôi": "हमें क्यों चुनें", "Cách đặt xe": "यह कैसे काम करता है", "Chọn tuyến đường": "अपना मार्ग चुनें", "Chọn số khách và loại xe": "यात्री और कार प्रकार चुनें", "Xem giá dự kiến": "अनुमानित कीमत देखें", "Gửi thông tin qua Zalo hoặc WhatsApp": "WhatsApp से बुकिंग भेजें", "Nhận xác nhận nhanh từ bên xe": "हमारी टीम से तेज़ पुष्टि पाएं", "Vị trí của chúng tôi": "हमें मानचित्र पर खोजें", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "मुई ने में आसान पिकअप पॉइंट", "Đón khách & Liên hệ": "पिकअप और संपर्क", "Mở Google Maps": "Google Maps खोलें", "Hỏi điểm đón qua Zalo": "WhatsApp पर पिकअप पूछें", "": ""},
+      ko: {"English": "한국어", "🚕 Mui Ne Private Car Service": "🚕 무이네 프라이빗 차량 서비스", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "안전 • 프라이빗 • 영어 지원 • 고정 요금", "📞 Gọi ngay": "📞 전화", "💬 Zalo": "💬 Zalo", "⭐ Dịch vụ xe riêng cao cấp được nhiều khách chọn": "⭐ 무이네 외국인 여행객이 신뢰하는 서비스", "Xe riêng VIP Mũi Né đi tỉnh – Đón tận nơi": "무이네 프리미엄 프라이빗 차량 서비스", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "호치민시, 달랏, 나트랑, 깜란, 껀터 등으로 편안한 프라이빗 차량을 예약하세요.\n            WhatsApp 빠른 답변, 깨끗한 차량, 전문 기사, 선결제 불필요.", "Khách hài lòng": "만족한 여행객", "Hỗ trợ Zalo": "WhatsApp 지원", "Chuyến riêng": "프라이빗 이동", "Không cần cọc": "선결제 없음", "🚀 Xem giá VIP & đặt xe": "🚀 요금 확인 및 예약", "💬 Nhắn Zalo ngay": "💬 Zalo 채팅", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "오늘 특별 할인 • 유연한 출발 시간 • 문앞 픽업/드롭", "✨ Chốt xe nhanh": "✅ 쉬운 예약", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "노선을 선택하고 요금을 확인한 뒤 몇 분 안에 WhatsApp으로 확정하세요.", "👑 Xe riêng cao cấp": "🚘 편안한 차량", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "4인승, 7인승, 리무진, 밴 등 다양한 차량 제공.", "🛡 Giá rõ ràng": "💵 명확한 가격", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "고정 요금, 숨은 비용 없음, 여행 후 결제.", "Dịch vụ nổi bật tại Mũi Né": "무이네 인기 체험", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "프라이빗 예약 • 빠른 확정 • 영어 지원", "🏝 Jeep Tour": "🏝 지프 투어", "Dịch vụ riêng tại Mũi Né": "무이네 프라이빗 체험", "Most Booked": "가장 인기", "✔ White Sand Dunes": "✔ 화이트 샌드 듄", "✔ Red Sand Dunes": "✔ 레드 샌드 듄", "✔ Fairy Stream": "✔ 요정의 샘", "✔ Fishing Village": "✔ 어촌 마을", "Check Availability": "가능 여부 확인", "🏔 Ta Cu Mountain": "🏔 타꾸 산", "Chuyến đi riêng": "프라이빗 투어", "Recommended": "추천", "✔ Reclining Buddha": "✔ 와불상", "✔ Cable Car": "✔ 케이블카", "✔ Mountain View": "✔ 산 전망", "✔ Chuyến riêng": "✔ 프라이빗 이동", "🎣 Fishing Experience": "🎣 낚시 체험", "Thư giãn và trải nghiệm riêng": "휴식과 직접 낚시", "Unique": "특별함", "✔ Freshwater fishing": "✔ 민물 낚시", "✔ Equipment included": "✔ 장비 포함", "✔ Relaxing nature": "✔ 여유로운 자연", "✔ Catch & cook": "✔ 잡아서 요리", "Tuyến đường phổ biến": "인기 노선", "Bấm chọn tuyến để xem giá nhanh": "노선을 눌러 예약 폼 작성", "Liên hệ Zalo nhanh": "WhatsApp 빠른 예약", "Booking VIP": "즉시 예약", "Xem giá VIP & giữ xe ngay": "요금 확인 및 예약", "Xác nhận nhanh qua Zalo hoặc WhatsApp • Giá rõ ràng • Không ghép khách": "WhatsApp 빠른 답변 • 숨은 비용 없음", "Số khách": "인원", "1 - 3 người": "1 - 3명", "4 - 6 người": "4 - 6명", "7 - 10 người": "7 - 10명", "Trên 10 người": "10명 이상", "Chọn tuyến *": "노선 선택 *", "Loại xe *": "차종 선택 *", "4 chỗ": "4인승", "7 chỗ": "7인승", "Limousine 9 chỗ VIP": "9인승 리무진", "16 chỗ": "16인승", "Giá dự kiến": "예상 요금", "Chọn tuyến và loại xe": "노선과 차량 선택", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "최종 확인은 WhatsApp에서", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 WhatsApp으로 예약", "✔ Phản hồi nhanh": "✔ 빠른 답변", "✔ Không cần cọc": "✔ 선결제 없음", "✔ Xe riêng": "✔ 프라이빗 전용", "Khách hàng nói gì": "여행객 후기", "Phản hồi thực tế": "실제 고객 후기", "“Xe sạch, tài xế đúng giờ, đặt xe nhanh qua Zalo rất tiện.”": "“서비스가 아주 좋았고 기사님도 정시에 왔으며 차량도 깨끗했습니다. WhatsApp 예약도 쉬웠어요.”", "“Đi gia đình rất thoải mái, không phải chờ ghép khách, hỗ trợ nhanh.”": "“무이네에서 가장 좋은 가격이었고 이동도 매우 편했습니다. 외국인 여행객에게 강력 추천합니다.”", "“Liên hệ dễ, tài xế chạy cẩn thận, lần sau mình sẽ đặt tiếp.”": "“응답이 빠르고 기사님도 전문적이며 이동이 안전했습니다. 다음에도 다시 예약할게요.”", "Vì sao nên chọn xe của chúng tôi": "왜 우리를 선택할까요", "✔ Xe riêng đi tỉnh uy tín tại Mũi Né": "✔ 무이네 믿을 수 있는 프라이빗 차량 서비스", "✔ Hỗ trợ nhanh qua Zalo, WhatsApp và điện thoại": "✔ WhatsApp 영어 지원", "✔ Đón tận nơi – trả tận nơi": "✔ 문앞 픽업 및 드롭", "✔ Chủ động giờ đi": "✔ 유연한 출발 시간", "✔ Giá trọn gói, không phát sinh": "✔ 숨은 비용 없는 고정 요금", "✔ Thanh toán linh hoạt": "✔ 여행 후 결제", "Cách đặt xe": "이용 방법", "Chọn tuyến đường": "노선 선택", "Chọn số khách và loại xe": "인원과 차종 선택", "Xem giá dự kiến": "예상 요금 확인", "Gửi thông tin qua Zalo hoặc WhatsApp": "WhatsApp으로 예약 보내기", "Nhận xác nhận nhanh từ bên xe": "팀의 빠른 확정 받기", "Vị trí của chúng tôi": "지도에서 찾기", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "무이네 편리한 픽업 지점", "Đón khách & Liên hệ": "픽업 및 연락", "Bạn có thể xem vị trí trên Google Maps để tiện liên hệ, hẹn điểm đón và xác nhận chuyến đi nhanh hơn.": "Google Maps에서 위치를 쉽게 확인해 픽업 지원, 빠른 연락, 여행 전 간편한 예약 확인이 가능합니다.", "📍 Điểm đón tại Mũi Né (xác nhận qua Zalo/WhatsApp)": "📍 무이네, 판티엣, 빈투언", "✔ Dễ tìm": "✔ 쉽게 찾을 수 있음", "✔ Hỗ trợ Zalo nhanh": "✔ WhatsApp 빠른 지원", "✔ Hẹn điểm đón linh hoạt": "✔ 편리한 픽업 조율", "Mở Google Maps": "Google 지도 열기", "Hỏi điểm đón qua Zalo": "WhatsApp으로 픽업 문의", "": "✈️ 텔레그램", "📍 Ho Chi Minh City → Mui Ne": "📍 호치민시 → 무이네", "📍 Ho Chi Minh City → Nha Trang": "📍 호치민시 → 나트랑", "📍 Ho Chi Minh City → Da Lat": "📍 호치민시 → 달랏", "📍 Ho Chi Minh City → Cam Ranh": "📍 호치민시 → 깜란", "📍 Ho Chi Minh City → Vung Tau": "📍 호치민시 → 붕따우", "📍 Ho Chi Minh City → Can Tho": "📍 호치민시 → 껀터", "📍 Can Tho → Ho Chi Minh City": "📍 껀터 → 호치민시", "📍 Mui Ne → Da Lat": "📍 무이네 → 달랏", "📍 Mui Ne → Nha Trang": "📍 무이네 → 나트랑", "📍 Mui Ne → Cam Ranh": "📍 무이네 → 깜란", "📍 Mui Ne → Ho Chi Minh City": "📍 무이네 → 호치민시", "📍 Mui Ne → Vung Tau": "📍 무이네 → 붕따우", "📍 Da Lat → Mui Ne": "📍 달랏 → 무이네", "📍 Da Lat → Nha Trang": "📍 달랏 → 나트랑", "📍 Da Lat → Ho Chi Minh City": "📍 달랏 → 호치민시", "📍 Da Lat → Vung Tau": "📍 달랏 → 붕따우", "📍 Nha Trang → Mui Ne": "📍 나트랑 → 무이네", "📍 Nha Trang → Da Lat": "📍 나트랑 → 달랏", "📍 Nha Trang → Ho Chi Minh City": "📍 나트랑 → 호치민시", "📍 Nha Trang → Vung Tau": "📍 나트랑 → 붕따우", "📍 Cam Ranh → Mui Ne": "📍 깜란 → 무이네", "📍 Cam Ranh → Da Lat": "📍 깜란 → 달랏", "📍 Cam Ranh → Ho Chi Minh City": "📍 깜란 → 호치민시", "📍 Cam Ranh → Vung Tau": "📍 깜란 → 붕따우", "📍 Vung Tau → Da Lat": "📍 붕따우 → 달랏", "📍 Vung Tau → Ho Chi Minh City": "📍 붕따우 → 호치민시", "📍 Vung Tau → Mui Ne": "📍 붕따우 → 무이네", "📍 Vung Tau → Nha Trang": "📍 붕따우 → 나트랑", "📍 Vung Tau → Cam Ranh": "📍 붕따우 → 깜란"},
+      zh: {"English": "中文", "🚕 Mui Ne Private Car Service": "🚕 美奈包车服务", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "安全 • 私人接送 • 英文支持 • 固定价格", "📞 Gọi ngay": "📞 电话", "💬 Zalo": "💬 Zalo", "⭐ Dịch vụ xe riêng cao cấp được nhiều khách chọn": "⭐ 深受美奈外国游客信赖", "Xe riêng VIP Mũi Né đi tỉnh – Đón tận nơi": "美奈高级私人用车服务", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "预订舒适的私人接送服务，前往胡志明市、大叻、芽庄、金兰、芹苴等地。\n            WhatsApp 快速回复，车辆干净，司机专业，无需预付。", "Khách hài lòng": "满意旅客", "Hỗ trợ Zalo": "WhatsApp 支持", "Chuyến riêng": "私人接送", "Không cần cọc": "无需预付", "🚀 Xem giá VIP & đặt xe": "🚀 查看价格并立即预订", "💬 Nhắn Zalo ngay": "💬 在 WhatsApp 聊天", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "今日特别优惠 • 出发时间灵活 • 上门接送", "✨ Chốt xe nhanh": "✅ 轻松预订", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "选择路线、查看价格，并在几分钟内通过 WhatsApp 确认。", "👑 Xe riêng cao cấp": "🚘 舒适车辆", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "提供 4 座、7 座、豪华车和面包车，适合各种出行人数。", "🛡 Giá rõ ràng": "💵 价格透明", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "固定价格，无隐藏费用，行程结束后付款。", "Dịch vụ nổi bật tại Mũi Né": "美奈热门体验", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "私人预订 • 快速确认 • 英文支持", "🏝 Jeep Tour": "🏝 吉普车之旅", "Dịch vụ riêng tại Mũi Né": "美奈私人体验", "Most Booked": "最受欢迎", "✔ White Sand Dunes": "✔ 白沙丘", "✔ Red Sand Dunes": "✔ 红沙丘", "✔ Fairy Stream": "✔ 仙女溪", "✔ Fishing Village": "✔ 渔村", "Check Availability": "查看可订情况", "🏔 Ta Cu Mountain": "🏔 塔古山", "Chuyến đi riêng": "私人行程", "Recommended": "推荐", "✔ Reclining Buddha": "✔ 卧佛", "✔ Cable Car": "✔ 缆车", "✔ Mountain View": "✔ 山景", "✔ Chuyến riêng": "✔ 私人接送", "🎣 Fishing Experience": "🎣 钓鱼体验", "Thư giãn và trải nghiệm riêng": "放松并亲自钓鱼", "Unique": "独特", "✔ Freshwater fishing": "✔ 淡水钓鱼", "✔ Equipment included": "✔ 含设备", "✔ Relaxing nature": "✔ 轻松自然环境", "✔ Catch & cook": "✔ 现钓现做", "Tuyến đường phổ biến": "热门路线", "Bấm chọn tuyến để xem giá nhanh": "点击路线填写预订表单", "Liên hệ Zalo nhanh": "WhatsApp 快速预订", "Booking VIP": "即时预订", "Xem giá VIP & giữ xe ngay": "查看价格并预订", "Xác nhận nhanh qua Zalo hoặc WhatsApp • Giá rõ ràng • Không ghép khách": "WhatsApp 快速回复 • 无隐藏费用", "Số khách": "人数", "1 - 3 người": "1 - 3 人", "4 - 6 người": "4 - 6 人", "7 - 10 người": "7 - 10 人", "Trên 10 người": "10 人以上", "Chọn tuyến *": "选择路线 *", "Loại xe *": "车型 *", "4 chỗ": "4 座", "7 chỗ": "7 座", "Limousine 9 chỗ VIP": "9 座豪华车", "16 chỗ": "16 座", "Giá dự kiến": "预估价格", "Chọn tuyến và loại xe": "请选择路线和车型", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "最终确认通过 WhatsApp", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 通过 WhatsApp 预订", "✔ Phản hồi nhanh": "✔ 快速回复", "✔ Không cần cọc": "✔ 无需预付", "✔ Xe riêng": "✔ 仅限私人接送", "Khách hàng nói gì": "旅客评价", "Phản hồi thực tế": "真实客户反馈", "“Xe sạch, tài xế đúng giờ, đặt xe nhanh qua Zalo rất tiện.”": "“服务非常好，司机准时，车辆干净。通过 WhatsApp 预订很方便。”", "“Đi gia đình rất thoải mái, không phải chờ ghép khách, hỗ trợ nhanh.”": "“美奈最好的价格，行程也非常顺利。强烈推荐给外国游客。”", "“Liên hệ dễ, tài xế chạy cẩn thận, lần sau mình sẽ đặt tiếp.”": "“回复很快，司机专业，接送安全。下次还会再订。”", "Vì sao nên chọn xe của chúng tôi": "为什么选择我们", "✔ Xe riêng đi tỉnh uy tín tại Mũi Né": "✔ 美奈可靠的私人接送服务", "✔ Hỗ trợ nhanh qua Zalo, WhatsApp và điện thoại": "✔ WhatsApp 英文支持", "✔ Đón tận nơi – trả tận nơi": "✔ 上门接送", "✔ Chủ động giờ đi": "✔ 出发时间灵活", "✔ Giá trọn gói, không phát sinh": "✔ 固定价格，无隐藏费用", "✔ Thanh toán linh hoạt": "✔ 行程结束后付款", "Cách đặt xe": "如何预订", "Chọn tuyến đường": "选择路线", "Chọn số khách và loại xe": "选择人数和车型", "Xem giá dự kiến": "查看预估价格", "Gửi thông tin qua Zalo hoặc WhatsApp": "通过 WhatsApp 发送预订", "Nhận xác nhận nhanh từ bên xe": "获得我们团队的快速确认", "Vị trí của chúng tôi": "在地图上找到我们", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "美奈便捷上车点", "Đón khách & Liên hệ": "上车点与联系", "Bạn có thể xem vị trí trên Google Maps để tiện liên hệ, hẹn điểm đón và xác nhận chuyến đi nhanh hơn.": "您可以在 Google 地图上轻松找到我们的位置，方便接送支持、快速联系以及出发前确认预订。", "📍 Điểm đón tại Mũi Né (xác nhận qua Zalo/WhatsApp)": "📍 美奈，藩切，平顺", "✔ Dễ tìm": "✔ 容易找到", "✔ Hỗ trợ Zalo nhanh": "✔ WhatsApp 快速支持", "✔ Hẹn điểm đón linh hoạt": "✔ 方便协调上车点", "Mở Google Maps": "打开 Google 地图", "Hỏi điểm đón qua Zalo": "通过 WhatsApp 询问上车点", "": "", "📍 Ho Chi Minh City → Mui Ne": "📍 胡志明市 → 美奈", "📍 Ho Chi Minh City → Nha Trang": "📍 胡志明市 → 芽庄", "📍 Ho Chi Minh City → Da Lat": "📍 胡志明市 → 大叻", "📍 Ho Chi Minh City → Cam Ranh": "📍 胡志明市 → 金兰", "📍 Ho Chi Minh City → Vung Tau": "📍 胡志明市 → 头顿", "📍 Ho Chi Minh City → Can Tho": "📍 胡志明市 → 芹苴", "📍 Can Tho → Ho Chi Minh City": "📍 芹苴 → 胡志明市", "📍 Mui Ne → Da Lat": "📍 美奈 → 大叻", "📍 Mui Ne → Nha Trang": "📍 美奈 → 芽庄", "📍 Mui Ne → Cam Ranh": "📍 美奈 → 金兰", "📍 Mui Ne → Ho Chi Minh City": "📍 美奈 → 胡志明市", "📍 Mui Ne → Vung Tau": "📍 美奈 → 头顿", "📍 Da Lat → Mui Ne": "📍 大叻 → 美奈", "📍 Da Lat → Nha Trang": "📍 大叻 → 芽庄", "📍 Da Lat → Ho Chi Minh City": "📍 大叻 → 胡志明市", "📍 Da Lat → Vung Tau": "📍 大叻 → 头顿", "📍 Nha Trang → Mui Ne": "📍 芽庄 → 美奈", "📍 Nha Trang → Da Lat": "📍 芽庄 → 大叻", "📍 Nha Trang → Ho Chi Minh City": "📍 芽庄 → 胡志明市", "📍 Nha Trang → Vung Tau": "📍 芽庄 → 头顿", "📍 Cam Ranh → Mui Ne": "📍 金兰 → 美奈", "📍 Cam Ranh → Da Lat": "📍 金兰 → 大叻", "📍 Cam Ranh → Ho Chi Minh City": "📍 金兰 → 胡志明市", "📍 Cam Ranh → Vung Tau": "📍 金兰 → 头顿", "📍 Vung Tau → Da Lat": "📍 头顿 → 大叻", "📍 Vung Tau → Ho Chi Minh City": "📍 头顿 → 胡志明市", "📍 Vung Tau → Mui Ne": "📍 头顿 → 美奈", "📍 Vung Tau → Nha Trang": "📍 头顿 → 芽庄", "📍 Vung Tau → Cam Ranh": "📍 头顿 → 金兰"},
+      km: {"🚕 Mui Ne Private Car Service": "🚕 សេវារថយន្តឯកជន មួយណេ", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "សុវត្ថិភាព • ឯកជន • គាំទ្រភាសាអង់គ្លេស • តម្លៃថេរ", "📞 Gọi ngay": "📞 ទូរស័ព្ទ", "⭐ Dịch vụ xe riêng cao cấp được nhiều khách chọn": "⭐ ទទួលការជឿទុកចិត្តពីភ្ញៀវបរទេសនៅមួយណេ", "Xe riêng VIP Mũi Né đi tỉnh – Đón tận nơi": "សេវារថយន្តឯកជនគុណភាពខ្ពស់នៅមួយណេ", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "កក់សេវារថយន្តឯកជនសម្រាប់ធ្វើដំណើរយ៉ាងសុខស្រួលទៅកាន់ទីក្រុងហូជីមិញ ដាឡាត ញ៉ាត្រាង កាមរ៉ាញ កន្តូ និងកន្លែងផ្សេងៗ។\n            ឆ្លើយតបរហ័សតាម WhatsApp រថយន្តស្អាត អ្នកបើកបរជំនាញ និងមិនចាំបាច់កក់ប្រាក់មុន។", "Khách hài lòng": "ភ្ញៀវរីករាយ", "Hỗ trợ Zalo": "គាំទ្រ WhatsApp", "Chuyến riêng": "ដំណើរឯកជន", "Không cần cọc": "មិនចាំបាច់កក់ប្រាក់", "🚀 Xem giá VIP & đặt xe": "🚀 ពិនិត្យតម្លៃ និងកក់ឥឡូវនេះ", "💬 Nhắn Zalo ngay": "💬 ជជែកតាម WhatsApp", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "បញ្ចុះតម្លៃពិសេសថ្ងៃនេះ • ម៉ោងចេញដំណើរបត់បែនបាន • សេវារហូតដល់មុខទ្វារ", "✨ Chốt xe nhanh": "✅ កក់ងាយស្រួល", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "ជ្រើសផ្លូវ ពិនិត្យតម្លៃ និងបញ្ជាក់តាម WhatsApp ក្នុងរយៈពេលប៉ុន្មាននាទី។", "👑 Xe riêng cao cấp": "🚘 រថយន្តមានផាសុកភាព", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "ជម្រើសរថយន្ត 4 កៅអី 7 កៅអី លីមូស៊ីន និងឡានវ៉ាន់ សម្រាប់គ្រប់ក្រុមអ្នកដំណើរ។", "🛡 Giá rõ ràng": "💵 តម្លៃច្បាស់លាស់", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "តម្លៃថេរ មិនមានថ្លៃលាក់លៀម និងបង់ប្រាក់បន្ទាប់ពីដំណើរ។", "Dịch vụ nổi bật tại Mũi Né": "បទពិសោធន៍ពេញនិយមនៅមួយណេ", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "កក់ឯកជន • បញ្ជាក់រហ័ស • គាំទ្រភាសាអង់គ្លេស", "🏝 Jeep Tour": "🏝 ដំណើរកម្សាន្ត Jeep", "Dịch vụ riêng tại Mũi Né": "បទពិសោធន៍ឯកជននៅមួយណេ", "Most Booked": "កក់ច្រើនបំផុត", "✔ White Sand Dunes": "✔ ភ្នំខ្សាច់ស", "✔ Red Sand Dunes": "✔ ភ្នំខ្សាច់ក្រហម", "✔ Fairy Stream": "✔ ស្ទឹងទេពនិមិត្ត", "✔ Fishing Village": "✔ ភូមិនេសាទ", "Check Availability": "ពិនិត្យចំនួនទំនេរ", "🏔 Ta Cu Mountain": "🏔 ភ្នំតាគូ", "Chuyến đi riêng": "ដំណើរឯកជន", "Recommended": "ណែនាំ", "✔ Reclining Buddha": "✔ ព្រះពុទ្ធដេក", "✔ Cable Car": "✔ រថយន្តខ្សែកាប", "✔ Mountain View": "✔ ទេសភាពភ្នំ", "✔ Chuyến riêng": "✔ ដំណើរឯកជន", "🎣 Fishing Experience": "🎣 បទពិសោធន៍នេសាទ", "Thư giãn và trải nghiệm riêng": "សម្រាក និងនេសាទដោយខ្លួនឯង", "Unique": "ពិសេស", "✔ Freshwater fishing": "✔ នេសាទទឹកសាប", "✔ Equipment included": "✔ មានឧបករណ៍រួចរាល់", "✔ Relaxing nature": "✔ បរិយាកាសធម្មជាតិ", "✔ Catch & cook": "✔ នេសាទហើយចម្អិន", "Tuyến đường phổ biến": "ផ្លូវពេញនិយម", "Bấm chọn tuyến để xem giá nhanh": "ចុចជ្រើសផ្លូវដើម្បីបំពេញទម្រង់កក់", "Liên hệ Zalo nhanh": "កក់រហ័សតាម WhatsApp", "Booking VIP": "កក់ភ្លាមៗ", "Xem giá VIP & giữ xe ngay": "ពិនិត្យតម្លៃ និងកក់ទុក", "Xác nhận nhanh qua Zalo hoặc WhatsApp • Giá rõ ràng • Không ghép khách": "ឆ្លើយតបរហ័សតាម WhatsApp • មិនមានថ្លៃលាក់លៀម", "Số khách": "អ្នកដំណើរ", "1 - 3 người": "1 - 3 នាក់", "4 - 6 người": "4 - 6 នាក់", "7 - 10 người": "7 - 10 នាក់", "Trên 10 người": "លើសពី 10 នាក់", "Chọn tuyến *": "ជ្រើសផ្លូវ *", "Loại xe *": "ប្រភេទរថយន្ត *", "4 chỗ": "4 កៅអី", "7 chỗ": "7 កៅអី", "Limousine 9 chỗ VIP": "លីមូស៊ីន 9 កៅអី", "16 chỗ": "16 កៅអី", "Giá dự kiến": "តម្លៃប៉ាន់ស្មាន", "Chọn tuyến và loại xe": "ជ្រើសផ្លូវ និងរថយន្ត", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "បញ្ជាក់ចុងក្រោយតាម WhatsApp", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 កក់តាម WhatsApp", "✔ Phản hồi nhanh": "✔ ឆ្លើយតបរហ័ស", "✔ Không cần cọc": "✔ មិនចាំបាច់កក់ប្រាក់", "✔ Xe riêng": "✔ ឯកជនប៉ុណ្ណោះ", "Khách hàng nói gì": "អ្វីដែលភ្ញៀវនិយាយ", "Phản hồi thực tế": "មតិយោបល់ពិតពីអតិថិជន", "Vì sao nên chọn xe của chúng tôi": "ហេតុអ្វីជ្រើសរើសយើង", "Cách đặt xe": "របៀបដំណើរការ", "Chọn tuyến đường": "ជ្រើសផ្លូវរបស់អ្នក", "Chọn số khách và loại xe": "ជ្រើសចំនួនអ្នកដំណើរ និងប្រភេទរថយន្ត", "Xem giá dự kiến": "ពិនិត្យតម្លៃប៉ាន់ស្មាន", "Gửi thông tin qua Zalo hoặc WhatsApp": "ផ្ញើការកក់តាម WhatsApp", "Nhận xác nhận nhanh từ bên xe": "ទទួលការបញ្ជាក់រហ័សពីក្រុមយើង", "Vị trí của chúng tôi": "ស្វែងរកយើងលើផែនទី", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "ទីតាំងទទួលងាយស្រួលនៅមួយណេ", "Đón khách & Liên hệ": "ទទួល និងទំនាក់ទំនង", "Mở Google Maps": "បើក Google Maps", "Hỏi điểm đón qua Zalo": "សួរអំពីកន្លែងទទួលតាម WhatsApp", "": ""},
+      hi: {"🚕 Mui Ne Private Car Service": "🚕 मुई ने प्राइवेट कार सेवा", "Xe riêng • Đón tận nơi • Không ghép • Giá trọn gói": "सुरक्षित • निजी • अंग्रेज़ी सहायता • तय कीमत", "📞 Gọi ngay": "📞 कॉल", "⭐ Dịch vụ xe riêng cao cấp được nhiều khách chọn": "⭐ मुई ने में विदेशी यात्रियों का भरोसा", "Xe riêng VIP Mũi Né đi tỉnh – Đón tận nơi": "मुई ने में प्रीमियम प्राइवेट कार सेवा", "Chuyên xe riêng to Ho Chi Minh City, Da Lat, Nha Trang, Cam Ranh, Can Tho and more.\n            Fast WhatsApp reply, clean cars, professional drivers, and no deposit required.": "हो ची मिन्ह सिटी, दा लात, न्हा ट्रांग, कैम रन्ह, कैन थो और अन्य जगहों के लिए आरामदायक प्राइवेट ट्रांसफर बुक करें।\n            WhatsApp पर तेज़ जवाब, साफ गाड़ियाँ, पेशेवर ड्राइवर और कोई अग्रिम भुगतान नहीं।", "Khách hài lòng": "खुश यात्री", "Hỗ trợ Zalo": "WhatsApp सहायता", "Chuyến riêng": "निजी ट्रांसफर", "Không cần cọc": "बिना अग्रिम भुगतान", "🚀 Xem giá VIP & đặt xe": "🚀 कीमत देखें और अभी बुक करें", "💬 Nhắn Zalo ngay": "💬 Zalo पर चैट करें", "Đón tận nơi • Đi riêng • Chủ động thời gian • Không ghép khách": "आज विशेष छूट • लचीला प्रस्थान समय • डोर-टू-डोर सेवा", "✨ Chốt xe nhanh": "✅ आसान बुकिंग", "Chọn tuyến, xem giá và liên hệ Zalo, WhatsApp hoặc gọi điện trong vài giây.": "मार्ग चुनें, कीमत देखें और कुछ ही मिनटों में WhatsApp पर पुष्टि करें।", "👑 Xe riêng cao cấp": "🚘 आरामदायक गाड़ियाँ", "Có xe 4 chỗ, 7 chỗ, limousine và 16 chỗ cho gia đình hoặc nhóm đi riêng.": "हर यात्रा समूह के लिए 4-सीटर, 7-सीटर, लिमोज़ीन और वैन विकल्प।", "🛡 Giá rõ ràng": "💵 साफ़ कीमत", "Giữ nguyên giá niêm yết, không phát sinh chi phí trong hành trình.": "फिक्स्ड रेट, कोई छिपा शुल्क नहीं, और यात्रा के बाद भुगतान।", "Dịch vụ nổi bật tại Mũi Né": "मुई ने के बेहतरीन अनुभव", "Đặt nhanh • Xác nhận nhanh • Hỗ trợ Zalo": "निजी बुकिंग • तेज़ पुष्टि • अंग्रेज़ी सहायता", "🏝 Jeep Tour": "🏝 जीप टूर", "Dịch vụ riêng tại Mũi Né": "मुई ने में निजी अनुभव", "Most Booked": "सबसे ज़्यादा बुक किया गया", "✔ White Sand Dunes": "✔ सफेद रेत के टीले", "✔ Red Sand Dunes": "✔ लाल रेत के टीले", "✔ Fairy Stream": "✔ फेयरी स्ट्रीम", "✔ Fishing Village": "✔ मछुआरा गाँव", "Check Availability": "उपलब्धता देखें", "🏔 Ta Cu Mountain": "🏔 ता कू पर्वत", "Chuyến đi riêng": "निजी यात्रा", "Recommended": "सिफ़ारिश", "✔ Reclining Buddha": "✔ लेटा हुआ बुद्ध", "✔ Cable Car": "✔ केबल कार", "✔ Mountain View": "✔ पहाड़ी दृश्य", "✔ Chuyến riêng": "✔ निजी ट्रांसफर", "🎣 Fishing Experience": "🎣 मछली पकड़ने का अनुभव", "Thư giãn và trải nghiệm riêng": "आराम करें और खुद मछली पकड़ें", "Unique": "अनोखा", "✔ Freshwater fishing": "✔ मीठे पानी की मछली पकड़ना", "✔ Equipment included": "✔ उपकरण शामिल", "✔ Relaxing nature": "✔ सुकूनभरी प्रकृति", "✔ Catch & cook": "✔ पकड़ें और पकाएँ", "Tuyến đường phổ biến": "लोकप्रिय मार्ग", "Bấm chọn tuyến để xem giá nhanh": "बुकिंग फ़ॉर्म भरने के लिए मार्ग चुनें", "Liên hệ Zalo nhanh": "WhatsApp पर तेज़ बुकिंग", "Booking VIP": "तुरंत बुकिंग", "Xem giá VIP & giữ xe ngay": "कीमत देखें और रिज़र्व करें", "Xác nhận nhanh qua Zalo hoặc WhatsApp • Giá rõ ràng • Không ghép khách": "WhatsApp पर तेज़ जवाब • कोई छिपा शुल्क नहीं", "Số khách": "यात्री", "1 - 3 người": "1 - 3 लोग", "4 - 6 người": "4 - 6 लोग", "7 - 10 người": "7 - 10 लोग", "Trên 10 người": "10+ लोग", "Chọn tuyến *": "मार्ग चुनें *", "Loại xe *": "कार प्रकार *", "4 chỗ": "4 सीटें", "7 chỗ": "7 सीटें", "Limousine 9 chỗ VIP": "9 सीट लिमोज़ीन", "16 chỗ": "16 सीटें", "Giá dự kiến": "अनुमानित कीमत", "Chọn tuyến và loại xe": "मार्ग और कार चुनें", "Xác nhận cuối cùng qua Zalo, WhatsApp hoặc điện thoại": "अंतिम पुष्टि WhatsApp पर", "🚀 Gửi thông tin qua Zalo hoặc WhatsApp": "🚀 WhatsApp से बुक करें", "✔ Phản hồi nhanh": "✔ तेज़ जवाब", "✔ Không cần cọc": "✔ कोई अग्रिम नहीं", "✔ Xe riêng": "✔ केवल निजी", "Khách hàng nói gì": "यात्री क्या कहते हैं", "Phản hồi thực tế": "वास्तविक ग्राहक प्रतिक्रिया", "Vì sao nên chọn xe của chúng tôi": "हमें क्यों चुनें", "Cách đặt xe": "यह कैसे काम करता है", "Chọn tuyến đường": "अपना मार्ग चुनें", "Chọn số khách và loại xe": "यात्री और कार प्रकार चुनें", "Xem giá dự kiến": "अनुमानित कीमत देखें", "Gửi thông tin qua Zalo hoặc WhatsApp": "WhatsApp से बुकिंग भेजें", "Nhận xác nhận nhanh từ bên xe": "हमारी टीम से तेज़ पुष्टि पाएं", "Vị trí của chúng tôi": "हमें मानचित्र पर खोजें", "Hỗ trợ đón khách thuận tiện tại Mũi Né": "मुई ने में आसान पिकअप पॉइंट", "Đón khách & Liên hệ": "पिकअप और संपर्क", "Mở Google Maps": "Google Maps खोलें", "Hỏi điểm đón qua Zalo": "WhatsApp पर पिकअप पूछें", "": ""},
     };
 
     const routeKeys = Array.from(document.querySelectorAll('.route-card .font-bold.text-lg')).map(el => el.textContent.replace('📍 ','').trim());
@@ -1265,8 +1549,9 @@ const textMaps = {
 
       selectedPrice = finalPrice;
       const usd = Math.round(finalPrice / 25000);
+      setActiveRouteCard(route);
 
-      priceBox.innerText = "$" + usd + " (~" + finalPrice.toLocaleString() + " VND)";
+      priceBox.innerText = '$' + usd + ' (~' + formatVND(finalPrice) + ')';
     }
 
     function selectRoute(route) {
