@@ -334,11 +334,7 @@
       <button type="button" class="lang-option w-full text-left px-4 py-3 hover:bg-gray-50 text-sm font-semibold" data-lang="en">🇬🇧 English</button>
       <button type="button" class="lang-option w-full text-left px-4 py-3 hover:bg-gray-50 text-sm font-semibold" data-lang="vi">🇻🇳 Tiếng Việt</button>
       <button type="button" class="lang-option w-full text-left px-4 py-3 hover:bg-gray-50 text-sm font-semibold" data-lang="ru">🇷🇺 Русский</button>
-      <button type="button" class="lang-option w-full text-left px-4 py-3 hover:bg-gray-50 text-sm font-semibold" data-lang="ko">🇰🇷 한국어</button>
-      <button type="button" class="lang-option w-full text-left px-4 py-3 hover:bg-gray-50 text-sm font-semibold" data-lang="zh">🇨🇳 中文</button>
-      <button type="button" class="lang-option w-full text-left px-4 py-3 hover:bg-gray-50 text-sm font-semibold" data-lang="km">🇰🇭 Khmer</button>
-      <button type="button" class="lang-option w-full text-left px-4 py-3 hover:bg-gray-50 text-sm font-semibold" data-lang="hi">🇮🇳 Hindi</button>
-    </div>
+                            </div>
   </div>
 
 </div>
@@ -351,9 +347,7 @@
       <div class="text-sm md:text-base font-semibold">
         <span class="gold-text font-extrabold">VIP PRIVATE CAR</span> • Xe riêng cao cấp • Tài xế quen tuyến • Hỗ trợ nhanh trong ngày
       </div>
-      <div class="text-xs md:text-sm text-gray-200">
-        🔥 Hôm nay còn <span id="vipSpots">3</span> xe đẹp cho các tuyến dài: TP.HCM, Đà Lạt, Nha Trang, Cam Ranh
-      </div>
+      
     </div>
   </div>
 
@@ -906,17 +900,29 @@ const languages = {
 };
 const locationNames={en:{'Ho Chi Minh City':'Ho Chi Minh City','Mui Ne':'Mui Ne','Da Lat':'Da Lat','Nha Trang':'Nha Trang','Cam Ranh':'Cam Ranh','Vung Tau':'Vung Tau','Can Tho':'Can Tho'},vi:{'Ho Chi Minh City':'TP.HCM','Mui Ne':'Mũi Né','Da Lat':'Đà Lạt','Nha Trang':'Nha Trang','Cam Ranh':'Cam Ranh','Vung Tau':'Vũng Tàu','Can Tho':'Cần Thơ'},ru:{'Ho Chi Minh City':'Хошимин','Mui Ne':'Муйне','Da Lat':'Далат','Nha Trang':'Нячанг','Cam Ranh':'Камрань','Vung Tau':'Вунгтау','Can Tho':'Кантхо'}};
 function detectBrowserLanguage(){
-  const browserLang=((navigator.language||navigator.userLanguage||'en')+'').toLowerCase();
-  if(browserLang.startsWith('vi')) return 'vi';
-  if(browserLang.startsWith('ru')) return 'ru';
-  if(browserLang.startsWith('en')) return 'en';
+  const browserLangs = Array.isArray(navigator.languages) && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language || navigator.userLanguage || 'en'];
+
+  const normalized = browserLangs
+    .filter(Boolean)
+    .map(lang => String(lang).toLowerCase());
+
+  for (const lang of normalized) {
+    if (lang.startsWith('vi')) return 'vi';
+    if (lang.startsWith('ru')) return 'ru';
+    if (lang.startsWith('en')) return 'en';
+  }
+
   return 'en';
 }
 const savedLang=localStorage.getItem('lang');
 const manualLang=localStorage.getItem('lang_manual');
 let currentLang=(manualLang==='1' && languages[savedLang]) ? savedLang : detectBrowserLanguage();
 if(!languages[currentLang]) currentLang='en';
-localStorage.setItem('lang', currentLang);
+if(manualLang==='1'){
+  localStorage.setItem('lang', currentLang);
+}
 const t=()=>languages[currentLang]||languages.en;
 const localizePlace=name=>(locationNames[currentLang]||locationNames.vi)[name]||name;
 const localizeRoute=route=>{const p=route.split(' → '); return p.length===2?`${localizePlace(p[0])} → ${localizePlace(p[1])}`:route;};
